@@ -1,20 +1,18 @@
-import SectionContainer, { RAIL_SPACING } from 'components/SectionContainer';
+import SectionContainer from 'components/SectionContainer';
 import Spacer from 'components/Spacer';
 import Typography from 'components/Typography';
 import { CategoryContext } from 'contexts/Category';
 import { CATEGORY } from 'contexts/Category/types';
 import React, { useContext } from 'react';
-import { MAX_COLUMN_WIDTH } from 'sections/styles';
+import { COLUMN_GAP_SIZE, MAX_COLUMN_WIDTH } from 'sections/styles';
 import styled from 'styled-components';
-
-const Container = styled(SectionContainer)`
-  max-width: ${2 * MAX_COLUMN_WIDTH - 2 * RAIL_SPACING}px;
-`;
 
 const CategoryButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: ${MAX_COLUMN_WIDTH}px;
 
   border: none;
   background: none;
@@ -25,6 +23,10 @@ const CategoryButton = styled.button`
   :hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
+
+  @media (max-width: 860px) {
+    width: initial;
+  }
 `;
 
 const Nav: React.FC = () => {
@@ -34,19 +36,19 @@ const Nav: React.FC = () => {
   const handleProjectsClick = () => setCategory(CATEGORY.PROJECTS);
 
   return (
-    <Container>
+    <SectionContainer>
       <CategoryButton onClick={handleExperienceClick}>
         <Typography as="h3" underline={category === CATEGORY.EXPERIENCE}>
           {CATEGORY.EXPERIENCE}
         </Typography>
       </CategoryButton>
-      <Spacer width={16} height={16} />
+      <Spacer width={COLUMN_GAP_SIZE} height={16} />
       <CategoryButton onClick={handleProjectsClick}>
         <Typography as="h3" underline={category === CATEGORY.PROJECTS}>
           {CATEGORY.PROJECTS}
         </Typography>
       </CategoryButton>
-    </Container>
+    </SectionContainer>
   );
 };
 
