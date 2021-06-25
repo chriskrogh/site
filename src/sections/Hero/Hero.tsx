@@ -21,6 +21,7 @@ const Hero: React.FC = () => {
         src="/assets/pro_pic.png"
         width={MAX_COLUMN_WIDTH}
         height={MAX_COLUMN_WIDTH}
+        priority
         unoptimized={process.env.NODE_ENV === 'development'} // https://github.com/vercel/next.js/issues/24421
       />
       <Spacer height={16} />
