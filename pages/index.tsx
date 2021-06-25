@@ -1,3 +1,4 @@
+import Column from 'components/Column';
 import ExperienceSection from 'components/ExperienceSection';
 import { EXPERIENCE_SECTION } from 'components/ExperienceSection/types';
 import Footer from 'components/Footer';
@@ -54,21 +55,22 @@ const Landing: React.FC = () => {
         {category === CATEGORY.EXPERIENCE
           ? Object.values(EXPERIENCE_SECTION).map(
               (value: EXPERIENCE_SECTION, index) => (
-                <ExperienceSection
-                  key={value}
-                  section={value}
-                  reverse={index % 2 === 0}
-                />
+                <Column key={value}>
+                  {index > 0 && <Spacer height={16} />}
+                  <ExperienceSection
+                    section={value}
+                    reverse={index % 2 === 0}
+                  />
+                </Column>
               ),
             )
           : category === CATEGORY.PROJECTS
           ? Object.values(PROJECT_SECTION).map(
               (value: PROJECT_SECTION, index) => (
-                <ProjectSection
-                  key={value}
-                  section={value}
-                  reverse={index % 2 === 0}
-                />
+                <Column key={value}>
+                  {index > 0 && <Spacer height={16} />}
+                  <ProjectSection section={value} reverse={index % 2 === 0} />
+                </Column>
               ),
             )
           : null}
