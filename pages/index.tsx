@@ -1,9 +1,26 @@
+import Footer from 'components/Footer';
 import Page from 'components/Page';
+import Spacer from 'components/Spacer';
+import { CategoryContext } from 'contexts/Category';
+import { CATEGORY } from 'contexts/Category/types';
 import Head from 'next/head';
-import React from 'react';
+import React, { useContext } from 'react';
+import Contact from 'sections/Contact';
+import Experience from 'sections/Experience';
 import Hero from 'sections/Hero';
+import Nav from 'sections/Nav';
+import Projects from 'sections/Projects';
+import styled from 'styled-components';
+
+const MainPage = styled(Page)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const Landing: React.FC = () => {
+  const { category } = useContext(CategoryContext);
+
   return (
     <>
       <Head>
@@ -24,9 +41,21 @@ const Landing: React.FC = () => {
           rel="stylesheet"
         />
       </Head>
-      <Page>
+      <MainPage>
+        <Spacer height={24} />
         <Hero />
-      </Page>
+        <Spacer height={16} />
+        <Contact />
+        <Spacer height={16} />
+        <Nav />
+        <Spacer height={16} />
+        {category === CATEGORY.EXPERIENCE ? (
+          <Experience />
+        ) : category === CATEGORY.PROJECTS ? (
+          <Projects />
+        ) : null}
+        <Footer />
+      </MainPage>
     </>
   );
 };

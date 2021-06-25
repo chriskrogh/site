@@ -5,7 +5,6 @@ const Page = styled.div`
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: black;
 `;
 
 export default Page;

@@ -1,5 +1,5 @@
 # Chris Krogh
 
-Super tiny personal website hosted using GitHub Pages.
+Personal website built using NextJS and deployed on Vercel.
 
 https://chriskrogh.com

@@ -1,29 +1,39 @@
+import CircularImage from 'components/CircularImage';
 import Column from 'components/Column';
-import Row from 'components/Row';
+import { RAIL_SPACING } from 'components/SectionContainer';
+import Spacer from 'components/Spacer';
+import Summary from 'components/Summary';
 import Typography from 'components/Typography';
-import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 
-const IMAGE_SIZE = 300;
+import { MAX_COLUMN_WIDTH } from '../styles';
 
-const CircularImage = styled(Image)`
-  border-radius: ${IMAGE_SIZE / 2}px;
+const Container = styled(Column)`
+  padding: 0 ${RAIL_SPACING}px;
+  width: calc(100% - ${2 * RAIL_SPACING}px);
 `;
 
 const Hero: React.FC = () => {
   return (
-    <Row justifyContent="space-around" fullWidth>
+    <Container alignItems="center">
       <CircularImage
         src="/assets/pro_pic.png"
-        width={IMAGE_SIZE}
-        height={IMAGE_SIZE}
-        unoptimized
+        width={MAX_COLUMN_WIDTH}
+        height={MAX_COLUMN_WIDTH}
+        unoptimized={process.env.NODE_ENV === 'development'} // https://github.com/vercel/next.js/issues/24421
       />
-      <Column>
+      <Spacer height={16} />
+      <Summary>
         <Typography as="h1">Hi there!</Typography>
-      </Column>
-    </Row>
+        <Spacer height={16} />
+        <Typography as="p">
+          My name is Chris and I'm a final year student at the University of
+          Waterloo pursuing a Bachelor of Computer Science - Minor in
+          Statistics.
+        </Typography>
+      </Summary>
+    </Container>
   );
 };
 

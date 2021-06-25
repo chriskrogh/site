@@ -1,10 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-  }
   h1 {
     font-family: Roboto;
     font-size: 52px;
@@ -16,35 +12,35 @@ const GlobalStyle = createGlobalStyle`
     font-family: Roboto;
     font-size: 44px;
     font-weight: 400;
-    line-height: 44px;
+    line-height: 50px;
     letter-spacing: 2;
   }
   h3 {
     font-family: Roboto;
     font-size: 36px;
     font-weight: 300;
-    line-height: 32px;
+    line-height: 44px;
     letter-spacing: 1;
   }
   h4 {
-    font-family: Source Sans Pro;
+    font-family: Open Sans;
     font-size: 28px;
     font-weight: 300;
-    line-height: 26px;
+    line-height: 36px;
     letter-spacing: 1;
   }
   h5 {
-    font-family: Source Sans Pro;
+    font-family: Open Sans;
     font-size: 22px;
     font-weight: 300;
-    line-height: 24px;
+    line-height: 30px;
     letter-spacing: 0.5;
   }
-  p: {
-    font-family: Source Sans Pro;
-    font-size: 14px;
+  p {
+    font-family: Open Sans;
+    font-size: 18px;
     font-weight: 300;
-    line-height: 20px;
+    line-height: 28px;
     letter-spacing: 0.25;
   }
 `;
