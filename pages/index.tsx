@@ -1,15 +1,17 @@
+import ExperienceSection from 'components/ExperienceSection';
+import { EXPERIENCE_SECTION } from 'components/ExperienceSection/types';
 import Footer from 'components/Footer';
 import Page from 'components/Page';
+import ProjectSection from 'components/ProjectSection';
+import { PROJECT_SECTION } from 'components/ProjectSection/types';
 import Spacer from 'components/Spacer';
 import { CategoryContext } from 'contexts/Category';
 import { CATEGORY } from 'contexts/Category/types';
 import Head from 'next/head';
 import React, { useContext } from 'react';
 import Contact from 'sections/Contact';
-import Experience from 'sections/Experience';
 import Hero from 'sections/Hero';
 import Nav from 'sections/Nav';
-import Projects from 'sections/Projects';
 import styled from 'styled-components';
 
 const MainPage = styled(Page)`
@@ -49,11 +51,27 @@ const Landing: React.FC = () => {
         <Spacer height={16} />
         <Nav />
         <Spacer height={16} />
-        {category === CATEGORY.EXPERIENCE ? (
-          <Experience />
-        ) : category === CATEGORY.PROJECTS ? (
-          <Projects />
-        ) : null}
+        {category === CATEGORY.EXPERIENCE
+          ? Object.values(EXPERIENCE_SECTION).map(
+              (value: EXPERIENCE_SECTION, index) => (
+                <ExperienceSection
+                  key={value}
+                  section={value}
+                  reverse={index % 2 === 0}
+                />
+              ),
+            )
+          : category === CATEGORY.PROJECTS
+          ? Object.values(PROJECT_SECTION).map(
+              (value: PROJECT_SECTION, index) => (
+                <ProjectSection
+                  key={value}
+                  section={value}
+                  reverse={index % 2 === 0}
+                />
+              ),
+            )
+          : null}
         <Footer />
       </MainPage>
     </>

@@ -1,13 +1,13 @@
 import { BaseContentSection } from 'types/section/base';
 
 export enum EXPERIENCE_SECTION {
-  DOT,
-  FAIRE,
-  SYS,
-  WEBVELOPER,
-  INTUIT,
-  MANULIFE,
-  TELEIOS,
+  DOT = 'DOT',
+  FAIRE = 'FAIRE',
+  SYS = 'SYS',
+  WEBVELOPER = 'WEBVELOPER',
+  INTUIT = 'INTUIT',
+  MANULIFE = 'MANULIFE',
+  TELEIOS = 'TELEIOS',
 }
 
 export type ExperienceSection = BaseContentSection & {

@@ -1,14 +1,14 @@
 import { BaseContentSection } from 'types/section/base';
 
 export enum PROJECT_SECTION {
-  LIFE_LOGS,
-  SONG_STATS,
-  FINDER,
-  ANOTHER_NOTE_APP,
-  ACS,
-  KIT,
-  VINGS,
-  SOCKET_CHAT,
+  LIFE_LOGS = 'LIFE_LOGS',
+  SONG_STATS = 'SONG_STATS',
+  FINDER = 'FINDER',
+  ANOTHER_NOTE_APP = 'ANOTHER_NOTE_APP',
+  ACS = 'ACS',
+  KIT = 'KIT',
+  VINGS = 'VINGS',
+  SOCKET_CHAT = 'SOCKET_CHAT',
 }
 
 export type ProjectSection = BaseContentSection & {
