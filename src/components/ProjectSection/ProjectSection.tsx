@@ -1,4 +1,6 @@
+import Column from 'components/Column';
 import IconLink from 'components/IconLink';
+import Point from 'components/Point';
 import Row from 'components/Row';
 import SectionContainer from 'components/SectionContainer';
 import Spacer from 'components/Spacer';
@@ -20,7 +22,7 @@ type Props = {
 };
 
 const ProjectSection: React.FC<Props> = ({ section, reverse }) => {
-  const { image, title, description, link, tech, gitHubLink, figmaLink } =
+  const { image, title, descriptions, link, tech, gitHubLink, figmaLink } =
     ProjectSections[section];
 
   return (
@@ -62,7 +64,16 @@ const ProjectSection: React.FC<Props> = ({ section, reverse }) => {
           </Row>
         </Row>
         <Spacer height={16} />
-        <Typography as="p">{description}</Typography>
+        {descriptions.map((description, index) => (
+          <Column key={description}>
+            {index > 0 && <Spacer height={4} />}
+            <Row justifyContent="center" fullWidth>
+              <Point />
+              <Spacer width={8} />
+              <Typography as="p">{description}</Typography>
+            </Row>
+          </Column>
+        ))}
         <Spacer height={16} />
         <TechStack tech={tech} />
       </Summary>

@@ -7,7 +7,9 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
     [EXPERIENCE_SECTION.DOT]: {
       image: '/assets/dot_logo.png',
       title: 'Dot',
-      description: '',
+      descriptions: [
+        'Architected, designed, and implemented an ewallet platform for Trinidad and Tobago!',
+      ],
       link: 'https://dot.cash',
       tech: [
         TECH.TYPESCRIPT,
@@ -21,7 +23,7 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
         TECH.KUBERNETES,
         TECH.AZURE,
       ],
-      position: 'Founder + Software Engineer',
+      position: 'Founder, CTO',
       duration: {
         start: new Date(2020, 10, 1),
       },
@@ -29,7 +31,11 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
     [EXPERIENCE_SECTION.FAIRE]: {
       image: '/assets/faire_logo.png',
       title: 'Faire',
-      description: '',
+      descriptions: [
+        'Built complete features using React like carousels and banners for Faire Winter Market, a search experience for editing preorders, and prompts for fixing cart issues.',
+        'Restructured an internal NodeJS server into a monorepo using yarn workspaces to add a frontend for triggering actions manually.',
+        'Configured end to end tests to also run on mobile web using Cypress to increase mobile test coverage.',
+      ],
       link: 'https://faire.com',
       tech: [TECH.TYPESCRIPT, TECH.REACT, TECH.NODE],
       position: 'Frontend Engineer Co-op',
@@ -41,7 +47,7 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
     [EXPERIENCE_SECTION.SYS]: {
       image: '/assets/sys_logo.png',
       title: 'Sell Your Stuff',
-      description: '',
+      descriptions: [''],
       link: 'https://sellyourstuff.tt/',
       tech: [
         TECH.TYPESCRIPT,
@@ -59,7 +65,7 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
     [EXPERIENCE_SECTION.WEBVELOPER]: {
       image: '/assets/webveloper_logo.png',
       title: 'Webveloper',
-      description: '',
+      descriptions: [''],
       link: 'https://webveloper.com/',
       tech: [TECH.TYPESCRIPT, TECH.REACT, TECH.NODE],
       position: 'Software Engineer Co-Op',
@@ -71,7 +77,7 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
     [EXPERIENCE_SECTION.INTUIT]: {
       image: '/assets/intuit_logo.png',
       title: 'Intuit',
-      description: '',
+      descriptions: [''],
       link: 'https://www.intuit.com/',
       tech: [TECH.JAVA, TECH.TYPESCRIPT, TECH.NODE],
       position: 'Software Engineer Co-Op',
@@ -83,7 +89,7 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
     [EXPERIENCE_SECTION.MANULIFE]: {
       image: '/assets/manulife_logo.png',
       title: 'Manulife Financial',
-      description: '',
+      descriptions: [''],
       link: 'https://www.manulife.com/',
       tech: [TECH.JAVASCRIPT, TECH.REACT, TECH.CSHARP, TECH.DOTNET],
       position: 'Full Stack Engineer Co-Op',
@@ -95,7 +101,7 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
     [EXPERIENCE_SECTION.TELEIOS]: {
       image: '/assets/teleios_logo.png',
       title: 'Teleios Systems',
-      description: '',
+      descriptions: [''],
       link: 'https://www.teleios-systems.com/',
       tech: [TECH.CSHARP, TECH.DOTNET, TECH.AZURE],
       position: 'Software Developer Intern',

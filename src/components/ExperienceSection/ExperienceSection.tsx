@@ -1,3 +1,6 @@
+import Column from 'components/Column';
+import Point from 'components/Point';
+import Row from 'components/Row';
 import SectionContainer from 'components/SectionContainer';
 import Spacer from 'components/Spacer';
 import Summary from 'components/Summary';
@@ -24,7 +27,7 @@ type Props = {
 };
 
 const ExperienceSection: React.FC<Props> = ({ section, reverse }) => {
-  const { image, title, description, link, tech, position, duration } =
+  const { image, title, descriptions, link, tech, position, duration } =
     ExperienceSections[section];
 
   return (
@@ -57,7 +60,16 @@ const ExperienceSection: React.FC<Props> = ({ section, reverse }) => {
           {duration.end ? formatDate(duration.end) : 'Present'}
         </Typography>
         <Spacer height={16} />
-        <Typography as="p">{description}</Typography>
+        {descriptions.map((description, index) => (
+          <Column key={description}>
+            {index > 0 && <Spacer height={4} />}
+            <Row justifyContent="center" fullWidth>
+              <Point />
+              <Spacer width={8} />
+              <Typography as="p">{description}</Typography>
+            </Row>
+          </Column>
+        ))}
         <Spacer height={16} />
         <TechStack tech={tech} />
       </Summary>

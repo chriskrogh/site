@@ -11,7 +11,7 @@ const SectionContainer = styled.div<{ reverse?: boolean }>`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 700px) {
+  @media (max-width: 860px) {
     flex-direction: column;
   }
 `;
