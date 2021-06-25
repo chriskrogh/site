@@ -16,8 +16,8 @@ const Point = styled.div`
   min-height: ${SIZE}px;
   border-radius: 50%;
   margin-top: 10px;
-  background: linear-gradient(180deg, #1ed760 0%, #70ff00 100%);
-  animation: ${spin} 8s linear infinite;
+  background: linear-gradient(180deg, #1ed760 0%, #aef875 100%);
+  animation: ${spin} 1s linear infinite;
 `;
 
 export default Point;
