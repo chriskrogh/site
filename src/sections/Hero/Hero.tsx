@@ -24,10 +24,12 @@ const Hero: React.FC = () => {
         unoptimized={process.env.NODE_ENV === 'development'} // https://github.com/vercel/next.js/issues/24421
       />
       <Spacer height={16} />
-      <Summary>
-        <Typography as="h1">Hi there!</Typography>
+      <Summary alignItems="center">
+        <Typography as="h1" center>
+          Hi there!
+        </Typography>
         <Spacer height={16} />
-        <Typography as="p">
+        <Typography as="p" center>
           My name is Chris and I'm a final year student at the University of
           Waterloo pursuing a Bachelor of Computer Science - Minor in
           Statistics.
