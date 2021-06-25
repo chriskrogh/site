@@ -39,7 +39,7 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
       },
     },
     [EXPERIENCE_SECTION.SYS]: {
-      image: '/assets/faire_logo.png',
+      image: '/assets/sys_logo.svg',
       title: 'Sell Your Stuff',
       description: '',
       link: 'https://sellyourstuff.tt/',
