@@ -72,7 +72,7 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
       image: '/assets/webveloper_logo.png',
       title: 'Webveloper',
       descriptions: [
-        'Implemented performant UI components using memoization to provide a snappy editor experience.',
+        'Implemented performant UI components using memoization to provide a snappy website editor experience.',
         'Reduced dev server build time from ~30s to ~10s by implementing hot module reloading with custom webpack config.',
       ],
       link: 'https://webveloper.com/',
@@ -89,7 +89,7 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
       descriptions: [
         'Implemented new pages in TurboTax using object-oriented Java with 100% diff coverage on unit tests.',
         'Reduced TurboTax build time by 45% by parallelizing Typescript compilation with Gulp, saving teammates 40 hours/year.',
-        'Automated large manual tasks like regression test script conversion using Replay and VM deployment using PowerShell',
+        'Automated large manual tasks like regression test script conversion using Replay and VM deployment using PowerShell.',
       ],
       link: 'https://www.intuit.com/',
       tech: [TECH.JAVA, TECH.TYPESCRIPT, TECH.NODE],

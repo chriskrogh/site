@@ -7,7 +7,7 @@ export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
     image: '/assets/life_logs_logo.png',
     title: 'Life Logs',
     descriptions: [
-      'Developed an Android app for CS446 that uses NLP to generate meaningful summaries about your life after you tell it about your day.',
+      'Developed an Android app that uses NLP to generate meaningful summaries about your life after you tell it about your day.',
       'Created a NodeJS server to handle authentication and data backups.',
       'Designed a simple but impactful user experience on Figma.',
     ],
@@ -20,8 +20,8 @@ export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
     image: '/assets/song_stats_logo.png',
     title: 'Song Stats',
     descriptions: [
-      'Built a web app for CS348 that uses Spotify APIs to show insightful summaries about songs and artists.',
-      'Implemented queries using TypeORM and MySql that fetche missing fragments of data from Spotify when necessary.',
+      'Built a web app that uses Spotify APIs to show insightful summaries about songs and artists.',
+      'Implemented queries using TypeORM and MySql that fetch missing fragments of data from Spotify when necessary.',
     ],
     gitHubLink: 'https://github.com/Dimatsa/cs348-database',
     tech: [TECH.TYPESCRIPT, TECH.REACT, TECH.NODE, TECH.MYSQL, TECH.DOCKER],
@@ -60,7 +60,7 @@ export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
     title: 'ACS',
     descriptions: [
       'Collaborated on the website for the Association of Caribbean Students (ACS) at the University of Waterloo.',
-      'Added a voting feature that included video compression and uploads to AWS.',
+      'Added a voting feature that included compression of video submissions and uploads to AWS.',
     ],
     link: 'https://uwacs.club/',
     gitHubLink: 'https://github.com/uwaterlooacs/acs',
