@@ -70,7 +70,7 @@ export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
     image: '/assets/kit.png',
     title: 'KIT',
     descriptions: [
-      'Wrote a cron job that automates WhatsApp messages to friends to keep in touch duting the pandemic.',
+      'Wrote a cron job that automates WhatsApp messages to friends to keep in touch during the pandemic.',
     ],
     gitHubLink: 'https://github.com/chriskrogh/kit',
     tech: [TECH.PYTHON],
