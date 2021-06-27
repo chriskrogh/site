@@ -19,6 +19,7 @@ export enum TECH {
   KUBERNETES = 'KUBERNETES',
   MONGO = 'MONGO',
   MYSQL = 'MYSQL',
+  NEXT = 'NEXT',
   NODE = 'NODE',
   PYTHON = 'PYTHON',
   REACT = 'REACT',

@@ -18,6 +18,7 @@ import {
   SiMicrosoftazure,
   SiMongodb,
   SiMysql,
+  SiNextDotJs,
   SiNodeDotJs,
   SiPython,
   SiReact,
@@ -100,6 +101,10 @@ export const TechMap: Record<TECH, TechIconLink> = {
   [TECH.MYSQL]: {
     icon: SiMysql,
     link: 'https://www.mysql.com/',
+  },
+  [TECH.NEXT]: {
+    icon: SiNextDotJs,
+    link: 'https://nextjs.org/',
   },
   [TECH.NODE]: {
     icon: SiNodeDotJs,
