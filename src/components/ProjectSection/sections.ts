@@ -76,7 +76,7 @@ export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
     tech: [TECH.PYTHON],
   },
   [PROJECT_SECTION.VINGS]: {
-    image: '/assets/vings.png',
+    image: '/assets/vings_logo.svg',
     title: 'Vings',
     descriptions: [
       'Developed and launched an expense tracker app that accumulated over 700 users on both iOS and Android.',

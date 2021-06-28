@@ -69,7 +69,7 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
       },
     },
     [EXPERIENCE_SECTION.WEBVELOPER]: {
-      image: '/assets/webveloper_logo.png',
+      image: '/assets/webveloper_logo.svg',
       title: 'Webveloper',
       descriptions: [
         'Implemented performant UI components using memoization to provide a snappy website editor experience.',
@@ -100,7 +100,7 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
       },
     },
     [EXPERIENCE_SECTION.MANULIFE]: {
-      image: '/assets/manulife_logo.png',
+      image: '/assets/manulife_logo.svg',
       title: 'Manulife Financial',
       descriptions: [
         'Implemented API endpoints for a .NET Core web app to receive users’ insurance data and trigger financial calculations.',
