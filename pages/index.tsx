@@ -1,18 +1,18 @@
 import Column from 'components/Column';
-import ExperienceSection from 'components/ExperienceSection';
-import { EXPERIENCE_SECTION } from 'components/ExperienceSection/types';
 import Footer from 'components/Footer';
 import Page from 'components/Page';
-import ProjectSection from 'components/ProjectSection';
-import { PROJECT_SECTION } from 'components/ProjectSection/types';
 import Spacer from 'components/Spacer';
 import { CategoryContext } from 'contexts/Category';
 import { CATEGORY } from 'contexts/Category/types';
 import Head from 'next/head';
 import React, { useContext } from 'react';
 import Contact from 'sections/Contact';
+import ExperienceSection from 'sections/Experience';
+import { EXPERIENCE_SECTION } from 'sections/Experience/types';
 import Hero from 'sections/Hero';
 import Nav from 'sections/Nav';
+import ProjectSection from 'sections/Project';
+import { PROJECT_SECTION } from 'sections/Project/types';
 import styled from 'styled-components';
 
 const MainPage = styled(Page)`

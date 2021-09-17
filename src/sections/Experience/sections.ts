@@ -9,15 +9,14 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
       title: 'Dot',
       descriptions: [
         'Architected, designed, and implemented an ewallet platform for Trinidad and Tobago!',
+        'Crafted a modern, mobile wallet user experience in Figma and implemented it in React Native.',
         'Engineered a GraphQL microservice backend using Apollo Federation that handles authentication and processes peer-to-peer and VISA transactions.',
         'Configured container orchestration using Kubernetes to integrate with GitHub actions to manage the CICD pipeline.',
-        'Crafted a modern, mobile wallet user experience in Figma and implemented it with Ionic Framework and React.',
       ],
       link: 'https://dot.cash',
       tech: [
         TECH.TYPESCRIPT,
-        TECH.REACT,
-        TECH.IONIC,
+        TECH.REACTNATIVE,
         TECH.APOLLO,
         TECH.GRAPHQL,
         TECH.MONGO,
@@ -61,6 +60,7 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
         TECH.APOLLO,
         TECH.GRAPHQL,
         TECH.MONGO,
+        TECH.NODE,
       ],
       position: 'Software Engineer',
       duration: {

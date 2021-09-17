@@ -33,6 +33,7 @@ const ProjectSection: React.FC<Props> = ({ section, reverse }) => {
         height={MAX_COLUMN_WIDTH}
         objectFit="cover"
         unoptimized={process.env.NODE_ENV === 'development'} // https://github.com/vercel/next.js/issues/24421
+        alt="logo"
       />
       <Spacer width={COLUMN_GAP_SIZE} height={16} />
       <Summary justifyContent="center" alignItems="space-between" fullWidth>

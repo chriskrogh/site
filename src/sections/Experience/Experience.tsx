@@ -39,6 +39,7 @@ const ExperienceSection: React.FC<Props> = ({ section, reverse }) => {
           height={MAX_COLUMN_WIDTH}
           objectFit="contain"
           unoptimized={process.env.NODE_ENV === 'development'} // https://github.com/vercel/next.js/issues/24421
+          alt="logo"
         />
       </ImageContainer>
       <Spacer width={COLUMN_GAP_SIZE} height={16} />
