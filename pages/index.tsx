@@ -32,17 +32,6 @@ const Landing: React.FC = () => {
           name="description"
           content="Who is Chris Krogh? Learn more about the Trinidadian Software Engineer here!"
         />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <MainPage>
         <Spacer height={24} />
