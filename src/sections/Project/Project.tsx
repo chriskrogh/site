@@ -41,13 +41,13 @@ const ProjectSection: React.FC<Props> = ({ section, reverse }) => {
           {link ? (
             <Link href={link}>
               <a>
-                <Typography as="h2" underline>
+                <Typography as="h3" underline>
                   {title}
                 </Typography>
               </a>
             </Link>
           ) : (
-            <Typography as="h2">{title}</Typography>
+            <Typography as="h3">{title}</Typography>
           )}
           <Row>
             {gitHubLink && (
