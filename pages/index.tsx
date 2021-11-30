@@ -1,3 +1,4 @@
+import Button from 'components/Button';
 import Footer from 'components/Footer';
 import Page from 'components/Page';
 import Spacer from 'components/Spacer';
@@ -28,6 +29,8 @@ const Landing: React.FC = () => {
         <Hero />
         <Spacer height={16} />
         <Contact />
+        <Spacer height={16} />
+        <Button href="/resume">View Resume</Button>
         <Spacer height={16} />
         <Footer />
       </MainPage>
