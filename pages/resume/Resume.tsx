@@ -1,5 +1,6 @@
 import Column from 'components/Column';
 import Footer from 'components/Footer';
+import Page from 'components/Page';
 import Spacer from 'components/Spacer';
 import Typography from 'components/Typography';
 import Head from 'next/head';
@@ -8,6 +9,13 @@ import ExperienceSection from 'sections/Experience';
 import { EXPERIENCE_SECTION } from 'sections/Experience/types';
 import ProjectSection from 'sections/Project';
 import { PROJECT_SECTION } from 'sections/Project/types';
+import styled from 'styled-components';
+
+const MainPage = styled(Page)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const Resume: React.FC = () => {
   return (
@@ -19,10 +27,12 @@ const Resume: React.FC = () => {
           content="Take a look at Chris Krogh's resume."
         />
       </Head>
-      <Column alignItems="center" fullWidth>
-        <Spacer height={32} />
-        <Typography as="h1">Experience</Typography>
-        <Spacer height={32} />
+      <MainPage>
+        <Spacer height={48} />
+        <Typography as="h1" secondary>
+          Experience
+        </Typography>
+        <Spacer height={48} />
         {Object.values(EXPERIENCE_SECTION).map(
           (value: EXPERIENCE_SECTION, index) => (
             <Column key={value}>
@@ -31,9 +41,11 @@ const Resume: React.FC = () => {
             </Column>
           ),
         )}
-        <Spacer height={32} />
-        <Typography as="h1">Projects</Typography>
-        <Spacer height={32} />
+        <Spacer height={48} />
+        <Typography as="h1" secondary>
+          Projects
+        </Typography>
+        <Spacer height={48} />
         {Object.values(PROJECT_SECTION).map((value: PROJECT_SECTION, index) => (
           <Column key={value}>
             {index > 0 && <Spacer height={16} />}
@@ -42,7 +54,7 @@ const Resume: React.FC = () => {
         ))}
         <Spacer height={32} />
         <Footer />
-      </Column>
+      </MainPage>
     </>
   );
 };
