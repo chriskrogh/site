@@ -47,11 +47,11 @@ const ExperienceSection: React.FC<Props> = ({ section, reverse }) => {
         {link ? (
           <Link href={link}>
             <a>
-              <Typography as="h1">{title}</Typography>
+              <Typography as="h2">{title}</Typography>
             </a>
           </Link>
         ) : (
-          <Typography as="h1">{title}</Typography>
+          <Typography as="h2">{title}</Typography>
         )}
         <Spacer height={8} />
         <Typography as="h5">{position}</Typography>
