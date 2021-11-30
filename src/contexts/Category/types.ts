@@ -1,4 +1,0 @@
-export enum CATEGORY {
-  EXPERIENCE = 'EXPERIENCE',
-  PROJECTS = 'PROJECTS',
-}
