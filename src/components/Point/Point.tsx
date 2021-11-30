@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { COLORS } from 'theme/colors';
 
 const SIZE = 10;
 
@@ -16,7 +17,7 @@ const Point = styled.div`
   min-height: ${SIZE}px;
   border-radius: 50%;
   margin-top: 10px;
-  background: linear-gradient(180deg, #1ed760 0%, #aef875 100%);
+  background: linear-gradient(180deg, ${COLORS.lime} 0%, ${COLORS.lemon} 100%);
   animation: ${spin} 1s linear infinite;
 `;
 
