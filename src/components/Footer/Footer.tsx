@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
     <Container justifyContent="center" alignItems="center">
       <Spacer height={16} />
       <Typography as="p" center secondary>
-        This site was built using NextJS and is hosted on Vercel.
+        Built using NextJS and hosted on Vercel.
       </Typography>
       <Spacer height={8} />
       <IconLink src={TechMap[TECH.NEXT].icon} href={TechMap[TECH.NEXT].link} />
