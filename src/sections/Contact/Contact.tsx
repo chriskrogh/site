@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
         href="https://www.linkedin.com/in/christopherkrogh/"
       />
       <Spacer width={16} />
-      <IconLink src={FaWhatsapp} href="tel:12898932247" />
+      <IconLink src={FaWhatsapp} href="tel:18684859425" />
       <Spacer width={16} />
       <IconLink src={FaEnvelope} href="mailto:chris.krogh@outlook.com" />
     </Row>
