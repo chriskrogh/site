@@ -21,7 +21,7 @@ const Landing: React.FC = () => {
         <title>Chris Krogh</title>
         <meta
           name="description"
-          content="Chris Krogh is a software engineer from Trinidad and Tobago who likes to build cool things."
+          content="Learn more about the software engineer from Trinidad and Tobago who likes to build cool things."
         />
       </Head>
       <MainPage>
