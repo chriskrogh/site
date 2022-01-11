@@ -23,7 +23,7 @@ const Menu = styled(Column)`
   top: 0;
   left: 0;
   bottom: 0;
-  padding: 16px;
+  padding: 32px 0 0 32px;
 `;
 
 const MainPage = styled(Page)`
