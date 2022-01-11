@@ -13,7 +13,7 @@ import ProjectSection from 'sections/Project';
 import { PROJECT_SECTION } from 'sections/Project/types';
 import { COLUMN_GAP_SIZE, MAX_COLUMN_WIDTH } from 'sections/styles';
 import styled from 'styled-components';
-import { useIsMobile } from 'utils/isMobile';
+import { MOBILE_THRESHOLD, useScreenSize } from 'utils/useScreenSize';
 
 const EXPERIENCE_HEADER_ID = 'experience';
 const PROJECTS_HEADER_ID = 'projects';
@@ -34,10 +34,14 @@ const MainPage = styled(Page)`
 
 const HeaderWrapper = styled(Row)`
   width: ${2 * MAX_COLUMN_WIDTH + COLUMN_GAP_SIZE}px;
+
+  @media (max-width: ${MOBILE_THRESHOLD}px) {
+    width: auto;
+  }
 `;
 
 const Resume: React.FC = () => {
-  const isMobile = useIsMobile();
+  const screenSize = useScreenSize();
 
   return (
     <>
@@ -48,8 +52,10 @@ const Resume: React.FC = () => {
           content="Take a look at Chris Krogh's resume."
         />
       </Head>
-      {!isMobile && (
+      {screenSize === 'desktop' && (
         <Menu>
+          <Typography as="h5">Sections</Typography>
+          <Spacer height={8} />
           <Button href={`#${EXPERIENCE_HEADER_ID}`}>Experience</Button>
           <Spacer height={4} />
           <Button href={`#${PROJECTS_HEADER_ID}`}>Projects</Button>
