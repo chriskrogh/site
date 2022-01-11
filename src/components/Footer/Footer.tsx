@@ -1,11 +1,10 @@
 import Column from 'components/Column';
 import IconLink from 'components/IconLink';
 import Spacer from 'components/Spacer';
-import { TechMap } from 'components/TechStack/TechMap';
-import { TECH } from 'components/TechStack/types';
 import Typography from 'components/Typography';
 import React from 'react';
 import styled from 'styled-components';
+import { TECH, TechMap } from 'utils/tech';
 
 const RAIL_SPACING = 16;
 

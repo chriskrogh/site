@@ -1,4 +1,4 @@
-import { TECH } from 'components/TechStack/types';
+import { TECH } from 'utils/tech';
 
 export type BaseContentSection = {
   image: string;

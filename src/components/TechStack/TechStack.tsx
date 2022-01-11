@@ -3,9 +3,7 @@ import Row from 'components/Row';
 import Spacer from 'components/Spacer';
 import React from 'react';
 import styled from 'styled-components';
-
-import { TechMap } from './TechMap';
-import { TECH } from './types';
+import { TECH, TechMap } from 'utils/tech';
 
 const Container = styled(Row)`
   flex-wrap: wrap;

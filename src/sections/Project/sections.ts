@@ -1,4 +1,4 @@
-import { TECH } from 'components/TechStack/types';
+import { TECH } from 'utils/tech';
 
 import { PROJECT_SECTION, ProjectSection } from './types';
 
