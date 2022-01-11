@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { THRESHOLD } from 'utils/isMobile';
 
 export const RAIL_SPACING = 16;
 
@@ -11,7 +12,7 @@ const SectionContainer = styled.div<{ reverse?: boolean }>`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 860px) {
+  @media (max-width: ${THRESHOLD}px) {
     flex-direction: column;
   }
 `;
