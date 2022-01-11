@@ -1,9 +1,12 @@
 import Image from 'next/image';
-import { MAX_COLUMN_WIDTH } from 'sections/styles';
 import styled from 'styled-components';
 
-const CircularImage = styled(Image)`
-  border-radius: ${MAX_COLUMN_WIDTH / 2}px;
+type Props = {
+  size: number;
+};
+
+const CircularImage = styled(Image)<Props>`
+  border-radius: ${({ size }) => size / 2}px;
 `;
 
 export default CircularImage;
