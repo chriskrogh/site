@@ -1,6 +1,7 @@
 import { BaseContentSection } from 'types/section/base';
 
 export enum PROJECT_SECTION {
+  CARIBTO = 'CARIBTO',
   LIFE_LOGS = 'LIFE_LOGS',
   SONG_STATS = 'SONG_STATS',
   FINDER = 'FINDER',

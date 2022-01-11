@@ -1,4 +1,4 @@
-import { FaLink } from 'react-icons/fa';
+import { FaCloud, FaHardHat, FaLink } from 'react-icons/fa';
 import {
   SiAmazonaws,
   SiAndroid,
@@ -7,7 +7,7 @@ import {
   SiCsharp,
   SiCss3,
   SiDocker,
-  SiDotNet,
+  SiDotnet,
   SiFigma,
   SiGraphql,
   SiHtml5,
@@ -18,11 +18,12 @@ import {
   SiMicrosoftazure,
   SiMongodb,
   SiMysql,
-  SiNextDotJs,
-  SiNodeDotJs,
+  SiNextdotjs,
+  SiNodedotjs,
   SiPython,
   SiReact,
   SiRedis,
+  SiSolidity,
   SiSwift,
   SiTypescript,
 } from 'react-icons/si';
@@ -46,7 +47,7 @@ export const TechMap: Record<TECH, TechIconLink> = {
     icon: SiMicrosoftazure,
     link: 'https://azure.microsoft.com/',
   },
-  [TECH.AZUREFUNCTIONS]: {
+  [TECH.AZURE_FUNCTIONS]: {
     icon: SiAzurefunctions,
     link: 'https://azure.microsoft.com/en-us/services/functions/',
   },
@@ -63,16 +64,24 @@ export const TechMap: Record<TECH, TechIconLink> = {
     link: 'https://www.docker.com/',
   },
   [TECH.DOTNET]: {
-    icon: SiDotNet,
+    icon: SiDotnet,
     link: 'https://dotnet.microsoft.com/',
+  },
+  [TECH.ETHERS]: {
+    icon: FaCloud,
+    link: 'https://docs.ethers.io/',
+  },
+  [TECH.FIGMA]: {
+    icon: SiFigma,
+    link: 'https://www.figma.com/',
   },
   [TECH.GRAPHQL]: {
     icon: SiGraphql,
     link: 'https://graphql.org/',
   },
-  [TECH.FIGMA]: {
-    icon: SiFigma,
-    link: 'https://www.figma.com/',
+  [TECH.HARDHAT]: {
+    icon: FaHardHat,
+    link: 'https://hardhat.org/',
   },
   [TECH.HTML]: {
     icon: SiHtml5,
@@ -102,12 +111,12 @@ export const TechMap: Record<TECH, TechIconLink> = {
     icon: SiMysql,
     link: 'https://www.mysql.com/',
   },
-  [TECH.NEXT]: {
-    icon: SiNextDotJs,
+  [TECH.NEXTJS]: {
+    icon: SiNextdotjs,
     link: 'https://nextjs.org/',
   },
   [TECH.NODE]: {
-    icon: SiNodeDotJs,
+    icon: SiNodedotjs,
     link: 'https://nodejs.org/',
   },
   [TECH.PYTHON]: {
@@ -118,7 +127,7 @@ export const TechMap: Record<TECH, TechIconLink> = {
     icon: SiReact,
     link: 'https://reactjs.org/',
   },
-  [TECH.REACTNATIVE]: {
+  [TECH.REACT_NATIVE]: {
     icon: SiReact,
     link: 'https://reactnative.dev/',
   },
@@ -129,6 +138,10 @@ export const TechMap: Record<TECH, TechIconLink> = {
   [TECH.RELAY]: {
     icon: FaLink,
     link: 'https://relay.dev/',
+  },
+  [TECH.SOLIDITY]: {
+    icon: SiSolidity,
+    link: 'https://soliditylang.org/',
   },
   [TECH.SWIFT]: {
     icon: SiSwift,

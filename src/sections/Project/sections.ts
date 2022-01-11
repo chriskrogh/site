@@ -3,6 +3,24 @@ import { TECH } from 'components/TechStack/types';
 import { PROJECT_SECTION, ProjectSection } from './types';
 
 export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
+  [PROJECT_SECTION.CARIBTO]: {
+    image: '/assets/caribto_logo.png',
+    title: 'Caribto',
+    descriptions: [
+      'Designed and implemented fiat on / off ramp platform for the Caribbean.',
+      'Tested and deployed an ERC20 token preset from OpenZeppelin to the Polygon Mumbai test network using Hardhat.',
+      'Crafted a modern exchange experience that mints and burns tokens with React, Ethers and NextJS.',
+    ],
+    link: 'https://caribto.com',
+    tech: [
+      TECH.TYPESCRIPT,
+      TECH.SOLIDITY,
+      TECH.REACT,
+      TECH.NEXTJS,
+      TECH.ETHERS,
+      TECH.HARDHAT,
+    ],
+  },
   [PROJECT_SECTION.LIFE_LOGS]: {
     image: '/assets/life_logs_logo.png',
     title: 'Life Logs',
@@ -83,7 +101,7 @@ export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
       'Engineered a service using Azure functions that cached exchange rates, to reduce the number of calls to an external API.',
     ],
     gitHubLink: 'https://github.com/chriskrogh/Vings',
-    tech: [TECH.SWIFT, TECH.REACTNATIVE, TECH.AZUREFUNCTIONS],
+    tech: [TECH.SWIFT, TECH.REACT_NATIVE, TECH.AZURE_FUNCTIONS],
   },
   [PROJECT_SECTION.SOCKET_CHAT]: {
     image: '/assets/socket_chat.png',

@@ -22,7 +22,10 @@ const Footer: React.FC = () => {
         Built using NextJS and hosted on Vercel.
       </Typography>
       <Spacer height={8} />
-      <IconLink src={TechMap[TECH.NEXT].icon} href={TechMap[TECH.NEXT].link} />
+      <IconLink
+        src={TechMap[TECH.NEXTJS].icon}
+        href={TechMap[TECH.NEXTJS].link}
+      />
       <Spacer height={16} />
     </Container>
   );
