@@ -2,7 +2,7 @@ import IconLink from 'components/IconLink';
 import Row from 'components/Row';
 import Spacer from 'components/Spacer';
 import React from 'react';
-import { FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaPhone } from 'react-icons/fa';
 
 const Contact: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
         href="https://www.linkedin.com/in/christopherkrogh/"
       />
       <Spacer width={16} />
-      <IconLink src={FaWhatsapp} href="tel:18684859425" />
+      <IconLink src={FaPhone} href="tel:12898932247" />
       <Spacer width={16} />
       <IconLink src={FaEnvelope} href="mailto:chris.krogh@outlook.com" />
     </Row>
