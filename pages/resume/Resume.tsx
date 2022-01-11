@@ -59,6 +59,10 @@ const Resume: React.FC = () => {
           <Button href={`#${EXPERIENCE_HEADER_ID}`}>Experience</Button>
           <Spacer height={4} />
           <Button href={`#${PROJECTS_HEADER_ID}`}>Projects</Button>
+          <Spacer height={16} />
+          <Typography as="h5">More</Typography>
+          <Spacer height={8} />
+          <Button href="/resume.pdf">View as PDF</Button>
         </Menu>
       )}
       <MainPage>
