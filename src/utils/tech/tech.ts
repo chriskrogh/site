@@ -30,7 +30,7 @@ import {
 
 import { IconLink, TECH } from './types';
 
-export const Tech: Record<TECH, IconLink> = {
+export const TechIconLinks: Record<TECH, IconLink> = {
   [TECH.ANDROID]: {
     icon: SiAndroid,
     link: 'https://developer.android.com/',

@@ -3,7 +3,7 @@ import Row from 'components/Row';
 import Spacer from 'components/Spacer';
 import React from 'react';
 import styled from 'styled-components';
-import { TECH, Tech } from 'utils/tech';
+import { TECH, TechIconLinks } from 'utils/tech';
 
 const Container = styled(Row)`
   flex-wrap: wrap;
@@ -18,7 +18,10 @@ const TechStack: React.FC<Props> = ({ tech }) => {
     <Container fullWidth>
       {tech.map((value, index) => (
         <Row key={value}>
-          <IconLink src={Tech[value].icon} href={Tech[value].link} />
+          <IconLink
+            src={TechIconLinks[value].icon}
+            href={TechIconLinks[value].link}
+          />
           {index <= tech.length - 1 && <Spacer width={16} />}
         </Row>
       ))}
