@@ -16,7 +16,7 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
       link: 'https://dot.cash',
       tech: [
         TECH.TYPESCRIPT,
-        TECH.REACTNATIVE,
+        TECH.REACT_NATIVE,
         TECH.APOLLO,
         TECH.GRAPHQL,
         TECH.MONGO,
