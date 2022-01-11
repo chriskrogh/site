@@ -43,6 +43,9 @@ const GlobalStyle = createGlobalStyle`
     line-height: 28px;
     letter-spacing: 0.25;
   }
+  a {
+    color: white;
+  }
 `;
 
 export default GlobalStyle;
