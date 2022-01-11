@@ -62,7 +62,7 @@ const Resume: React.FC = () => {
           <Spacer height={16} />
           <Typography as="h5">More</Typography>
           <Spacer height={8} />
-          <Button href="/resume.pdf">View as PDF</Button>
+          <Button href="/resume.pdf">View PDF</Button>
         </Menu>
       )}
       <MainPage>
