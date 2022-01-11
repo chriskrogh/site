@@ -1,2 +1,2 @@
-export * from './map';
+export * from './tech';
 export * from './types';

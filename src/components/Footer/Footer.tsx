@@ -4,7 +4,7 @@ import Spacer from 'components/Spacer';
 import Typography from 'components/Typography';
 import React from 'react';
 import styled from 'styled-components';
-import { TECH, TechMap } from 'utils/tech';
+import { TECH, Tech } from 'utils/tech';
 
 const RAIL_SPACING = 16;
 
@@ -21,10 +21,7 @@ const Footer: React.FC = () => {
         Built using NextJS and hosted on Vercel.
       </Typography>
       <Spacer height={8} />
-      <IconLink
-        src={TechMap[TECH.NEXTJS].icon}
-        href={TechMap[TECH.NEXTJS].link}
-      />
+      <IconLink src={Tech[TECH.NEXTJS].icon} href={Tech[TECH.NEXTJS].link} />
       <Spacer height={16} />
     </Container>
   );

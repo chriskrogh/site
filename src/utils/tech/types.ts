@@ -33,7 +33,7 @@ export enum TECH {
   TYPESCRIPT = 'TYPESCRIPT',
 }
 
-export type TechIconLink = {
+export type IconLink = {
   icon: IconType;
   link: string;
 };

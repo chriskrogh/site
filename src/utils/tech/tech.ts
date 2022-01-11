@@ -28,9 +28,9 @@ import {
   SiTypescript,
 } from 'react-icons/si';
 
-import { TECH, TechIconLink } from './types';
+import { IconLink, TECH } from './types';
 
-export const TechMap: Record<TECH, TechIconLink> = {
+export const Tech: Record<TECH, IconLink> = {
   [TECH.ANDROID]: {
     icon: SiAndroid,
     link: 'https://developer.android.com/',
