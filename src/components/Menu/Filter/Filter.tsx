@@ -2,7 +2,7 @@ import Typography from 'components/Typography';
 import React from 'react';
 import styled from 'styled-components';
 
-const HEIGHT = 32;
+export const FILTER_HEIGHT = 32;
 
 type WrapperProps = {
   isSelected: boolean;
@@ -15,8 +15,8 @@ const Wrapper = styled.button<WrapperProps>`
   padding: 8px;
   border: 0;
   margin: 0;
-  height: ${HEIGHT}px;
-  border-radius: ${HEIGHT / 2}px;
+  height: ${FILTER_HEIGHT}px;
+  border-radius: ${FILTER_HEIGHT / 2}px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   cursor: pointer;
   background-color: ${({ isSelected }) =>

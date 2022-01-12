@@ -16,12 +16,14 @@ import {
 } from 'utils/sections';
 import { useScreenSize } from 'utils/useScreenSize';
 
-import Filter from './Filter';
+import Filter, { FILTER_HEIGHT } from './Filter';
 
 export const EXPERIENCE_HEADER_ID = 'experience';
 export const PROJECTS_HEADER_ID = 'projects';
 
-const DESKTOP_MENU_WIDTH = 150;
+const TOP_BOTTOM_PADDING = 32;
+const SCROLL_BAR_PADDING = 16;
+const DESKTOP_MENU_WIDTH = 170;
 
 const { languages, frameworks, devOps, databases } = getSortedFilters();
 
@@ -29,15 +31,19 @@ const Container = styled(Column)`
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
-  max-width: ${DESKTOP_MENU_WIDTH}px;
-  padding: 32px 0 0 32px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100% - ${2 * TOP_BOTTOM_PADDING}px);
+  max-width: ${DESKTOP_MENU_WIDTH - SCROLL_BAR_PADDING}px;
+  padding: ${TOP_BOTTOM_PADDING}px ${SCROLL_BAR_PADDING}px
+    ${TOP_BOTTOM_PADDING}px 32px;
   background-color: rgba(255, 255, 255, 0.05);
 `;
 
 const FilterContainer = styled(Row)`
-  max-width: ${DESKTOP_MENU_WIDTH}px;
-  overflow: scroll;
+  min-height: ${FILTER_HEIGHT}px;
+  max-width: ${DESKTOP_MENU_WIDTH - SCROLL_BAR_PADDING}px;
+  overflow-x: scroll;
   ::-webkit-scrollbar {
     display: none;
   }

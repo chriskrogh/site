@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { COLUMN_GAP_SIZE, MAX_COLUMN_WIDTH } from 'sections/styles';
 
 export const MOBILE_THRESHOLD = 2 * MAX_COLUMN_WIDTH + COLUMN_GAP_SIZE;
-export const TABLET_THRESHOLD = 1210;
+export const TABLET_THRESHOLD = 1234;
 
 type ScreenSize = 'mobile' | 'tablet' | 'desktop';
 
