@@ -14,7 +14,7 @@ import {
   getSortedFilters,
   Language,
 } from 'utils/sections';
-import { useScreenSize } from 'utils/useScreenSize';
+import { TABLET_THRESHOLD, useScreenSize } from 'utils/useScreenSize';
 
 import Filter, { FILTER_HEIGHT } from './Filter';
 
@@ -23,26 +23,36 @@ export const PROJECTS_HEADER_ID = 'projects';
 
 const TOP_BOTTOM_PADDING = 32;
 const SCROLL_BAR_PADDING = 16;
-const DESKTOP_MENU_WIDTH = 170;
+const MENU_WIDTH = 200;
 
 const { languages, frameworks, devOps, databases } = getSortedFilters();
 
 const Container = styled(Column)`
-  position: fixed;
-  top: 0;
-  left: 0;
+  @media (min-width: ${TABLET_THRESHOLD}px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    height: calc(100% - ${2 * TOP_BOTTOM_PADDING}px);
+    max-width: ${MENU_WIDTH - SCROLL_BAR_PADDING}px;
+    padding: ${TOP_BOTTOM_PADDING}px ${SCROLL_BAR_PADDING}px
+      ${TOP_BOTTOM_PADDING}px 32px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  @media (max-width: ${TABLET_THRESHOLD}px) {
+    padding: 16px;
+  }
   overflow-x: hidden;
-  overflow-y: auto;
-  height: calc(100% - ${2 * TOP_BOTTOM_PADDING}px);
-  max-width: ${DESKTOP_MENU_WIDTH - SCROLL_BAR_PADDING}px;
-  padding: ${TOP_BOTTOM_PADDING}px ${SCROLL_BAR_PADDING}px
-    ${TOP_BOTTOM_PADDING}px 32px;
-  background-color: rgba(255, 255, 255, 0.05);
 `;
 
 const FilterContainer = styled(Row)`
+  @media (min-width: ${TABLET_THRESHOLD}px) {
+    max-width: ${MENU_WIDTH - SCROLL_BAR_PADDING}px;
+  }
+  @media (max-width: ${TABLET_THRESHOLD}px) {
+    max-width: 100%;
+  }
   min-height: ${FILTER_HEIGHT}px;
-  max-width: ${DESKTOP_MENU_WIDTH - SCROLL_BAR_PADDING}px;
   overflow-x: scroll;
   ::-webkit-scrollbar {
     display: none;
@@ -114,8 +124,9 @@ const Menu: React.FC<Props> = ({
       <Spacer height={4} />
       <Button href={`#${PROJECTS_HEADER_ID}`}>Projects</Button>
       <Spacer height={16} />
-      <Row justifyContent="space-between" fullWidth>
+      <Row>
         <Typography as="h4">Filter</Typography>
+        <Spacer width={16} />
         <Button onClick={clearFilters}>
           <FaTimesCircle className="smaller-icon" />
         </Button>

@@ -1,15 +1,18 @@
+import Button from 'components/Button';
 import Column from 'components/Column';
 import Footer from 'components/Footer';
 import Menu, {
   EXPERIENCE_HEADER_ID,
   PROJECTS_HEADER_ID,
 } from 'components/Menu';
+import Modal from 'components/Modal';
 import Page from 'components/Page';
 import Row from 'components/Row';
 import Spacer from 'components/Spacer';
 import Typography from 'components/Typography';
 import Head from 'next/head';
 import React, { useState } from 'react';
+import { FaGripLines } from 'react-icons/fa';
 import ExperienceSection from 'sections/Experience';
 import ProjectSection from 'sections/Project';
 import { COLUMN_GAP_SIZE, MAX_COLUMN_WIDTH } from 'sections/styles';
@@ -42,6 +45,10 @@ const HeaderWrapper = styled(Row)`
 
 const Resume: React.FC = () => {
   const screenSize = useScreenSize();
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   const selectedCategoriesState = useState<CATEGORY[]>([]);
   const selectedLanguagesState = useState<Language[]>([]);
@@ -116,7 +123,15 @@ const Resume: React.FC = () => {
         />
       )}
       <MainPage>
-        <Spacer height={48} />
+        <Spacer height={screenSize === 'desktop' ? 48 : 24} />
+        {screenSize !== 'desktop' && (
+          <Row justifyContent="flex-end" fullWidth>
+            <Button onClick={openModal}>
+              <FaGripLines className="icon-link" />
+            </Button>
+            <Spacer width={32} />
+          </Row>
+        )}
         {experiences.length > 0 && (
           <>
             <HeaderWrapper id={EXPERIENCE_HEADER_ID}>
@@ -157,6 +172,15 @@ const Resume: React.FC = () => {
         <Spacer height={32} />
         <Footer />
       </MainPage>
+      <Modal isOpen={isModalOpen} close={closeModal}>
+        <Menu
+          selectedCategoriesState={selectedCategoriesState}
+          selectedLanguagesState={selectedLanguagesState}
+          selectedFrameworksState={selectedFrameworksState}
+          selectedDevOpsState={selectedDevOpsState}
+          selectedDatabasesState={selectedDatabasesState}
+        />
+      </Modal>
     </>
   );
 };
