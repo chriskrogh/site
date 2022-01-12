@@ -1,6 +1,9 @@
-import Button from 'components/Button';
 import Column from 'components/Column';
 import Footer from 'components/Footer';
+import Menu, {
+  EXPERIENCE_HEADER_ID,
+  PROJECTS_HEADER_ID,
+} from 'components/Menu';
 import Page from 'components/Page';
 import Row from 'components/Row';
 import Spacer from 'components/Spacer';
@@ -14,17 +17,6 @@ import { PROJECT_SECTION } from 'sections/Project/types';
 import { COLUMN_GAP_SIZE, MAX_COLUMN_WIDTH } from 'sections/styles';
 import styled from 'styled-components';
 import { MOBILE_THRESHOLD, useScreenSize } from 'utils/useScreenSize';
-
-const EXPERIENCE_HEADER_ID = 'experience';
-const PROJECTS_HEADER_ID = 'projects';
-
-const Menu = styled(Column)`
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  padding: 32px 0 0 32px;
-`;
 
 const MainPage = styled(Page)`
   display: flex;
@@ -52,19 +44,7 @@ const Resume: React.FC = () => {
           content="Take a look at Chris Krogh's resume."
         />
       </Head>
-      {screenSize === 'desktop' && (
-        <Menu>
-          <Typography as="h5">Sections</Typography>
-          <Spacer height={8} />
-          <Button href={`#${EXPERIENCE_HEADER_ID}`}>Experience</Button>
-          <Spacer height={4} />
-          <Button href={`#${PROJECTS_HEADER_ID}`}>Projects</Button>
-          <Spacer height={16} />
-          <Typography as="h5">More</Typography>
-          <Spacer height={8} />
-          <Button href="/resume.pdf">View PDF</Button>
-        </Menu>
-      )}
+      {screenSize === 'desktop' && <Menu />}
       <MainPage>
         <Spacer height={48} />
         <HeaderWrapper id={EXPERIENCE_HEADER_ID}>
