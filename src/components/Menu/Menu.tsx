@@ -22,8 +22,7 @@ export const EXPERIENCE_HEADER_ID = 'experience';
 export const PROJECTS_HEADER_ID = 'projects';
 
 const TOP_BOTTOM_PADDING = 32;
-const SCROLL_BAR_PADDING = 16;
-const MENU_WIDTH = 200;
+const MENU_WIDTH = 184;
 
 const { languages, frameworks, devOps, databases } = getSortedFilters();
 
@@ -34,9 +33,8 @@ const Container = styled(Column)`
     left: 0;
     overflow-y: auto;
     height: calc(100% - ${2 * TOP_BOTTOM_PADDING}px);
-    max-width: ${MENU_WIDTH - SCROLL_BAR_PADDING}px;
-    padding: ${TOP_BOTTOM_PADDING}px ${SCROLL_BAR_PADDING}px
-      ${TOP_BOTTOM_PADDING}px 32px;
+    max-width: ${MENU_WIDTH}px;
+    padding: ${TOP_BOTTOM_PADDING}px 0 ${TOP_BOTTOM_PADDING}px 32px;
     background-color: rgba(255, 255, 255, 0.1);
   }
   @media (max-width: ${TABLET_THRESHOLD}px) {
@@ -47,7 +45,7 @@ const Container = styled(Column)`
 
 const FilterContainer = styled(Row)`
   @media (min-width: ${TABLET_THRESHOLD}px) {
-    max-width: ${MENU_WIDTH - SCROLL_BAR_PADDING}px;
+    max-width: ${MENU_WIDTH}px;
   }
   @media (max-width: ${TABLET_THRESHOLD}px) {
     max-width: 100%;

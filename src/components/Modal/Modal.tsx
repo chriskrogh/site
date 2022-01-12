@@ -22,8 +22,8 @@ const MOBILE_STYLES: CSSProperties = {
 
 const CloseButtonWrapper = styled.div`
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 32px;
+  right: 32px;
 `;
 
 export type Props = {
