@@ -24,6 +24,7 @@ const CloseButtonWrapper = styled.div`
   position: absolute;
   top: 32px;
   right: 32px;
+  z-index: 1;
 `;
 
 export type Props = {
@@ -42,7 +43,6 @@ const Modal: React.FC<Props> = ({ isOpen, close, children }) => {
         content: {
           ...(screenSize !== 'desktop' ? MOBILE_STYLES : {}),
           backgroundColor: 'black',
-          position: 'relative',
         },
       }}
     >
