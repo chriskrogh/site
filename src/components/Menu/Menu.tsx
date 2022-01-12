@@ -109,7 +109,7 @@ const Menu: React.FC<Props> = ({
       <Button href={`#${PROJECTS_HEADER_ID}`}>Projects</Button>
       <Spacer height={16} />
       <Row justifyContent="space-between" fullWidth>
-        <Typography as="h4">Filters</Typography>
+        <Typography as="h4">Filter</Typography>
         <Button onClick={clearFilters}>
           <FaTimesCircle className="smaller-icon" />
         </Button>
@@ -214,7 +214,7 @@ const Menu: React.FC<Props> = ({
           </Row>
         ))}
       </FilterContainer>
-      <Spacer height={8} />
+      <Spacer height={16} />
       <Typography as="h4">More</Typography>
       <Spacer height={8} />
       <Button href="/resume.pdf">View PDF</Button>
