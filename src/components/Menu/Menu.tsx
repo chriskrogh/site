@@ -99,7 +99,7 @@ const Menu: React.FC<Props> = ({
         </Button>
       </Row>
       <Spacer height={8} />
-      <Typography as="p" underline>
+      <Typography as="p" secondary>
         Languages
       </Typography>
       <Spacer height={12} />
@@ -117,7 +117,7 @@ const Menu: React.FC<Props> = ({
         ))}
       </FilterContainer>
       <Spacer height={8} />
-      <Typography as="p" underline>
+      <Typography as="p" secondary>
         Frameworks
       </Typography>
       <Spacer height={12} />
@@ -135,7 +135,7 @@ const Menu: React.FC<Props> = ({
         ))}
       </FilterContainer>
       <Spacer height={8} />
-      <Typography as="p" underline>
+      <Typography as="p" secondary>
         Dev Ops
       </Typography>
       <Spacer height={12} />
@@ -153,7 +153,7 @@ const Menu: React.FC<Props> = ({
         ))}
       </FilterContainer>
       <Spacer height={8} />
-      <Typography as="p" underline>
+      <Typography as="p" secondary>
         Databases
       </Typography>
       <Spacer height={12} />
