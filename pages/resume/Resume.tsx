@@ -15,6 +15,8 @@ import ProjectSection from 'sections/Project';
 import { COLUMN_GAP_SIZE, MAX_COLUMN_WIDTH } from 'sections/styles';
 import styled from 'styled-components';
 import {
+  Categories,
+  CATEGORY,
   EXPERIENCE,
   ExperienceSections,
   PROJECT,
@@ -41,10 +43,37 @@ const HeaderWrapper = styled(Row)`
 const Resume: React.FC = () => {
   const screenSize = useScreenSize();
 
+  const selectedCategoriesState = useState<CATEGORY[]>([]);
   const selectedLanguagesState = useState<Language[]>([]);
   const selectedFrameworksState = useState<Framework[]>([]);
   const selectedDevOpsState = useState<DevOps[]>([]);
   const selectedDatabasesState = useState<Database[]>([]);
+
+  const experiencesInCategories = Object.values(EXPERIENCE).filter(
+    (experience) =>
+      selectedCategoriesState[0].reduce(
+        (inCategory: boolean, category) =>
+          inCategory &&
+          Categories[category].reduce(
+            (hasTech: boolean, tech) =>
+              hasTech || ExperienceSections[experience].tech.includes(tech),
+            false,
+          ),
+        true,
+      ),
+  );
+  const projectsInCategories = Object.values(PROJECT).filter((project) =>
+    selectedCategoriesState[0].reduce(
+      (inCategory: boolean, category) =>
+        inCategory &&
+        Categories[category].reduce(
+          (hasTech: boolean, tech) =>
+            hasTech || ProjectSections[project].tech.includes(tech),
+          false,
+        ),
+      true,
+    ),
+  );
 
   const filters: TECH[] = [
     ...selectedLanguagesState[0],
@@ -53,14 +82,14 @@ const Resume: React.FC = () => {
     ...selectedDatabasesState[0],
   ];
 
-  const experiences = Object.values(EXPERIENCE).filter((experience) =>
+  const experiences = experiencesInCategories.filter((experience) =>
     filters.reduce(
       (result: boolean, filter) =>
         result && ExperienceSections[experience].tech.includes(filter),
       true,
     ),
   );
-  const projects = Object.values(PROJECT).filter((project) =>
+  const projects = projectsInCategories.filter((project) =>
     filters.reduce(
       (result: boolean, filter) =>
         result && ProjectSections[project].tech.includes(filter),
@@ -79,6 +108,7 @@ const Resume: React.FC = () => {
       </Head>
       {screenSize === 'desktop' && (
         <Menu
+          selectedCategoriesState={selectedCategoriesState}
           selectedLanguagesState={selectedLanguagesState}
           selectedFrameworksState={selectedFrameworksState}
           selectedDevOpsState={selectedDevOpsState}

@@ -4,7 +4,28 @@ import { ExperienceSections } from './experience';
 import { ProjectSections } from './project';
 import { CATEGORY } from './types';
 
-export const CATEGORIES = Object.values(CATEGORY);
+export const Categories: Record<CATEGORY, TECH[]> = {
+  [CATEGORY.BLOCKCHAIN]: [TECH.ETHERS, TECH.HARDHAT, TECH.SOLIDITY],
+  [CATEGORY.FRONTEND]: [
+    TECH.CSS,
+    TECH.HTML,
+    TECH.NEXTJS,
+    TECH.REACT,
+    TECH.RELAY,
+  ],
+  [CATEGORY.BACKEND]: [
+    TECH.AWS,
+    TECH.AZURE,
+    TECH.DOTNET,
+    TECH.GRAPHQL,
+    TECH.MONGO,
+    TECH.MYSQL,
+    TECH.NODE,
+    TECH.REDIS,
+    TECH.KUBERNETES,
+  ],
+  [CATEGORY.MOBILE]: [TECH.ANDROID, TECH.REACT_NATIVE, TECH.SWIFT],
+};
 
 const LANGUAGES = [
   TECH.CSHARP,

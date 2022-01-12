@@ -7,17 +7,21 @@ import React from 'react';
 import { FaTimesCircle } from 'react-icons/fa';
 import styled from 'styled-components';
 import {
+  CATEGORY,
   Database,
   DevOps,
   Framework,
   getSortedFilters,
   Language,
 } from 'utils/sections';
+import { useScreenSize } from 'utils/useScreenSize';
 
 import Filter from './Filter';
 
 export const EXPERIENCE_HEADER_ID = 'experience';
 export const PROJECTS_HEADER_ID = 'projects';
+
+const DESKTOP_MENU_WIDTH = 150;
 
 const { languages, frameworks, devOps, databases } = getSortedFilters();
 
@@ -26,19 +30,21 @@ const Container = styled(Column)`
   top: 0;
   left: 0;
   bottom: 0;
+  max-width: ${DESKTOP_MENU_WIDTH}px;
   padding: 32px 0 0 32px;
   background-color: rgba(255, 255, 255, 0.05);
 `;
 
 const FilterContainer = styled(Row)`
-  max-width: 150px;
-  overflow-x: scroll;
+  max-width: ${DESKTOP_MENU_WIDTH}px;
+  overflow: scroll;
   ::-webkit-scrollbar {
     display: none;
   }
 `;
 
 type Props = {
+  selectedCategoriesState: [CATEGORY[], (categories: CATEGORY[]) => void];
   selectedLanguagesState: [Language[], (languages: Language[]) => void];
   selectedFrameworksState: [Framework[], (frameworks: Framework[]) => void];
   selectedDevOpsState: [DevOps[], (devOps: DevOps[]) => void];
@@ -46,23 +52,33 @@ type Props = {
 };
 
 const Menu: React.FC<Props> = ({
+  selectedCategoriesState,
   selectedLanguagesState,
   selectedFrameworksState,
   selectedDevOpsState,
   selectedDatabasesState,
 }) => {
+  const screenSize = useScreenSize();
+
+  const [selectedCategories, setSelectedCategories] = selectedCategoriesState;
   const [selectedLanguages, setSelectedLanguages] = selectedLanguagesState;
   const [selectedFrameworks, setSelectedFrameworks] = selectedFrameworksState;
   const [selectedDevOps, setSelectedDevOps] = selectedDevOpsState;
   const [selectedDatabases, setSelectedDatabases] = selectedDatabasesState;
 
   const clearFilters = () => {
+    setSelectedCategories([]);
     setSelectedLanguages([]);
     setSelectedFrameworks([]);
     setSelectedDevOps([]);
     setSelectedDatabases([]);
   };
 
+  const addCategory = (category: CATEGORY) =>
+    setSelectedCategories([...selectedCategories, category]);
+  const removeCategory = (category: CATEGORY) => {
+    setSelectedCategories(selectedCategories.filter((c) => c !== category));
+  };
   const addLanguage = (language: Language) =>
     setSelectedLanguages([...selectedLanguages, language]);
   const removeLanguage = (language: Language) => {
@@ -99,7 +115,35 @@ const Menu: React.FC<Props> = ({
         </Button>
       </Row>
       <Spacer height={8} />
-      <Typography as="p" secondary>
+      {screenSize === 'desktop' && (
+        <>
+          <Typography as="p">
+            <i>Hold shift to scroll horizontally.</i>
+          </Typography>
+          <Spacer height={8} />
+        </>
+      )}
+      <Typography as="h5" secondary>
+        Categories
+      </Typography>
+      <Spacer height={12} />
+      <FilterContainer>
+        {Object.values(CATEGORY).map((category, index) => (
+          <Row key={category}>
+            <Filter
+              isSelected={selectedCategories.includes(category)}
+              tech={category}
+              add={addCategory}
+              remove={removeCategory}
+            />
+            {index !== Object.values(CATEGORY).length - 1 && (
+              <Spacer width={4} />
+            )}
+          </Row>
+        ))}
+      </FilterContainer>
+      <Spacer height={8} />
+      <Typography as="h5" secondary>
         Languages
       </Typography>
       <Spacer height={12} />
@@ -117,7 +161,7 @@ const Menu: React.FC<Props> = ({
         ))}
       </FilterContainer>
       <Spacer height={8} />
-      <Typography as="p" secondary>
+      <Typography as="h5" secondary>
         Frameworks
       </Typography>
       <Spacer height={12} />
@@ -135,7 +179,7 @@ const Menu: React.FC<Props> = ({
         ))}
       </FilterContainer>
       <Spacer height={8} />
-      <Typography as="p" secondary>
+      <Typography as="h5" secondary>
         Dev Ops
       </Typography>
       <Spacer height={12} />
@@ -153,7 +197,7 @@ const Menu: React.FC<Props> = ({
         ))}
       </FilterContainer>
       <Spacer height={8} />
-      <Typography as="p" secondary>
+      <Typography as="h5" secondary>
         Databases
       </Typography>
       <Spacer height={12} />

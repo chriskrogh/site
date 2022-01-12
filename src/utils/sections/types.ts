@@ -45,7 +45,8 @@ export enum PROJECT {
 }
 
 export enum CATEGORY {
-  BLOCKCHAIN = 'BLOCKCHAIN',
-  FRONTEND = 'FRONTEND',
-  BACKEND = 'BACKEND',
+  BLOCKCHAIN = 'Blockchain',
+  FRONTEND = 'Frontend',
+  BACKEND = 'Backend',
+  MOBILE = 'Mobile',
 }
