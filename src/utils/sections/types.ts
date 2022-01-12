@@ -22,7 +22,7 @@ export type ProjectSection = BaseContentSection & {
   gitHubLink?: string;
 };
 
-export enum EXPERIENCE_SECTION {
+export enum EXPERIENCE {
   DOT = 'DOT',
   FAIRE = 'FAIRE',
   SYS = 'SYS',
@@ -32,7 +32,7 @@ export enum EXPERIENCE_SECTION {
   TELEIOS = 'TELEIOS',
 }
 
-export enum PROJECT_SECTION {
+export enum PROJECT {
   CARIBTO = 'CARIBTO',
   LIFE_LOGS = 'LIFE_LOGS',
   SONG_STATS = 'SONG_STATS',

@@ -1,9 +1,9 @@
 import { TECH } from 'utils/tech';
 
-import { PROJECT_SECTION, ProjectSection } from './types';
+import { PROJECT, ProjectSection } from './types';
 
-export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
-  [PROJECT_SECTION.CARIBTO]: {
+export const ProjectSections: Record<PROJECT, ProjectSection> = {
+  [PROJECT.CARIBTO]: {
     image: '/assets/caribto_logo.png',
     title: 'Caribto',
     descriptions: [
@@ -22,7 +22,7 @@ export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
       TECH.CHAI,
     ],
   },
-  [PROJECT_SECTION.LIFE_LOGS]: {
+  [PROJECT.LIFE_LOGS]: {
     image: '/assets/life_logs_logo.png',
     title: 'Life Logs',
     descriptions: [
@@ -35,7 +35,7 @@ export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
       'https://www.figma.com/file/FgGQL83PXAF6aDlG6DGxwi/V1?node-id=10%3A114',
     tech: [TECH.JAVA, TECH.ANDROID, TECH.NODE, TECH.MONGO],
   },
-  [PROJECT_SECTION.SONG_STATS]: {
+  [PROJECT.SONG_STATS]: {
     image: '/assets/song_stats_logo.png',
     title: 'Song Stats',
     descriptions: [
@@ -45,7 +45,7 @@ export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
     gitHubLink: 'https://github.com/Dimatsa/cs348-database',
     tech: [TECH.TYPESCRIPT, TECH.REACT, TECH.NODE, TECH.MYSQL, TECH.DOCKER],
   },
-  [PROJECT_SECTION.FINDER]: {
+  [PROJECT.FINDER]: {
     image: '/assets/finder_logo.svg',
     title: 'Finder',
     descriptions: [
@@ -55,7 +55,7 @@ export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
       'https://www.figma.com/file/pthaSVKKuRli2TGAi3l2JR/MVP?node-id=6%3A159',
     tech: [],
   },
-  [PROJECT_SECTION.ANOTHER_NOTE_APP]: {
+  [PROJECT.ANOTHER_NOTE_APP]: {
     image: '/assets/another_note_app_logo.png',
     title: 'Another Note App',
     descriptions: [
@@ -74,7 +74,7 @@ export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
       TECH.AWS,
     ],
   },
-  [PROJECT_SECTION.ACS]: {
+  [PROJECT.ACS]: {
     image: '/assets/acs_logo.png',
     title: 'ACS',
     descriptions: [
@@ -85,7 +85,7 @@ export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
     gitHubLink: 'https://github.com/uwaterlooacs/acs',
     tech: [TECH.TYPESCRIPT, TECH.REACT, TECH.NODE, TECH.MONGO, TECH.AWS],
   },
-  [PROJECT_SECTION.KIT]: {
+  [PROJECT.KIT]: {
     image: '/assets/kit.png',
     title: 'KIT',
     descriptions: [
@@ -94,7 +94,7 @@ export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
     gitHubLink: 'https://github.com/chriskrogh/kit',
     tech: [TECH.PYTHON],
   },
-  [PROJECT_SECTION.VINGS]: {
+  [PROJECT.VINGS]: {
     image: '/assets/vings_logo.svg',
     title: 'Vings',
     descriptions: [
@@ -104,7 +104,7 @@ export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
     gitHubLink: 'https://github.com/chriskrogh/Vings',
     tech: [TECH.SWIFT, TECH.REACT_NATIVE, TECH.AZURE_FUNCTIONS],
   },
-  [PROJECT_SECTION.SOCKET_CHAT]: {
+  [PROJECT.SOCKET_CHAT]: {
     image: '/assets/socket_chat.png',
     title: 'Socket Chat',
     descriptions: [

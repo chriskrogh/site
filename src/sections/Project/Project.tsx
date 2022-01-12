@@ -12,10 +12,10 @@ import Link from 'next/link';
 import React from 'react';
 import { SiFigma, SiGithub } from 'react-icons/si';
 import { COLUMN_GAP_SIZE, MAX_COLUMN_WIDTH } from 'sections/styles';
-import { PROJECT_SECTION, ProjectSections } from 'utils/sections';
+import { PROJECT, ProjectSections } from 'utils/sections';
 
 type Props = {
-  section: PROJECT_SECTION;
+  section: PROJECT;
   reverse?: boolean;
 };
 

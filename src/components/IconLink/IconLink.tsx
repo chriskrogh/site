@@ -27,7 +27,7 @@ const IconLink: React.FC<Props> = ({ src, href }) => {
     <Container justifyContent="center" alignItems="center">
       <Link href={href}>
         <a>
-          <IconSrc className="ckicon" />
+          <IconSrc className="icon-link" />
         </a>
       </Link>
     </Container>
