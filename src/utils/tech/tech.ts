@@ -9,6 +9,7 @@ import {
   SiDocker,
   SiDotnet,
   SiFigma,
+  SiGithubactions,
   SiGraphql,
   SiHtml5,
   SiIonic,
@@ -25,6 +26,7 @@ import {
   SiRedis,
   SiSolidity,
   SiSwift,
+  SiTravisci,
   SiTypescript,
 } from 'react-icons/si';
 
@@ -74,6 +76,10 @@ export const TechIconLinks: Record<TECH, IconLink> = {
   [TECH.FIGMA]: {
     icon: SiFigma,
     link: 'https://www.figma.com/',
+  },
+  [TECH.GITHUB_ACTIONS]: {
+    icon: SiGithubactions,
+    link: 'https://github.com/features/actions',
   },
   [TECH.GRAPHQL]: {
     icon: SiGraphql,
@@ -146,6 +152,10 @@ export const TechIconLinks: Record<TECH, IconLink> = {
   [TECH.SWIFT]: {
     icon: SiSwift,
     link: 'https://developer.apple.com/swift/',
+  },
+  [TECH.TRAVIS_CI]: {
+    icon: SiTravisci,
+    link: 'https://www.travis-ci.com/',
   },
   [TECH.TYPESCRIPT]: {
     icon: SiTypescript,
