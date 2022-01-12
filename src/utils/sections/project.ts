@@ -19,6 +19,7 @@ export const ProjectSections: Record<PROJECT_SECTION, ProjectSection> = {
       TECH.NEXTJS,
       TECH.ETHERS,
       TECH.HARDHAT,
+      TECH.CHAI,
     ],
   },
   [PROJECT_SECTION.LIFE_LOGS]: {

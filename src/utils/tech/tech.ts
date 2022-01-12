@@ -4,8 +4,10 @@ import {
   SiAndroid,
   SiApollographql,
   SiAzurefunctions,
+  SiChai,
   SiCsharp,
   SiCss3,
+  SiCypress,
   SiDocker,
   SiDotnet,
   SiFigma,
@@ -15,6 +17,7 @@ import {
   SiIonic,
   SiJava,
   SiJavascript,
+  SiJest,
   SiKubernetes,
   SiMicrosoftazure,
   SiMongodb,
@@ -61,6 +64,14 @@ export const TechIconLinks: Record<TECH, IconLink> = {
     icon: SiCss3,
     link: 'https://www.w3.org/TR/CSS/#css',
   },
+  [TECH.CHAI]: {
+    icon: SiChai,
+    link: 'https://www.chaijs.com/',
+  },
+  [TECH.CYPRESS]: {
+    icon: SiCypress,
+    link: 'https://www.cypress.io/',
+  },
   [TECH.DOCKER]: {
     icon: SiDocker,
     link: 'https://www.docker.com/',
@@ -104,6 +115,10 @@ export const TechIconLinks: Record<TECH, IconLink> = {
   [TECH.JAVASCRIPT]: {
     icon: SiJavascript,
     link: 'https://www.javascript.com/',
+  },
+  [TECH.JEST]: {
+    icon: SiJest,
+    link: 'https://jestjs.io/',
   },
   [TECH.KUBERNETES]: {
     icon: SiKubernetes,

@@ -23,6 +23,7 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
         TECH.REDIS,
         TECH.DOCKER,
         TECH.KUBERNETES,
+        TECH.GITHUB_ACTIONS,
         TECH.AZURE,
       ],
       position: 'Founder, CTO',
@@ -39,7 +40,14 @@ export const ExperienceSections: Record<EXPERIENCE_SECTION, ExperienceSection> =
         'Configured end to end tests to also run on mobile web using Cypress to increase test coverage.',
       ],
       link: 'https://faire.com',
-      tech: [TECH.TYPESCRIPT, TECH.REACT, TECH.NODE],
+      tech: [
+        TECH.TYPESCRIPT,
+        TECH.REACT,
+        TECH.NODE,
+        TECH.JEST,
+        TECH.CYPRESS,
+        TECH.TRAVIS_CI,
+      ],
       position: 'Frontend Engineer Co-op',
       duration: {
         start: new Date(2021, 0, 3),
