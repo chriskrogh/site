@@ -12,9 +12,7 @@ import React from 'react';
 import { COLUMN_GAP_SIZE, MAX_COLUMN_WIDTH } from 'sections/styles';
 import styled from 'styled-components';
 import { formatDate } from 'utils/formatDate';
-
-import { ExperienceSections } from './sections';
-import { EXPERIENCE_SECTION } from './types';
+import { EXPERIENCE_SECTION, ExperienceSections } from 'utils/sections';
 
 const ImageContainer = styled.div`
   max-width: ${MAX_COLUMN_WIDTH}px;

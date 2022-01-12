@@ -12,9 +12,7 @@ import Link from 'next/link';
 import React from 'react';
 import { SiFigma, SiGithub } from 'react-icons/si';
 import { COLUMN_GAP_SIZE, MAX_COLUMN_WIDTH } from 'sections/styles';
-
-import { ProjectSections } from './sections';
-import { PROJECT_SECTION } from './types';
+import { PROJECT_SECTION, ProjectSections } from 'utils/sections';
 
 type Props = {
   section: PROJECT_SECTION;
