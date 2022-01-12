@@ -17,6 +17,7 @@ const Wrapper = styled.button<WrapperProps>`
   margin: 0;
   height: ${HEIGHT}px;
   border-radius: ${HEIGHT / 2}px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   cursor: pointer;
   background-color: ${({ isSelected }) =>
     isSelected ? 'rgba(255, 255, 255, 0.25)' : 'initial'};
