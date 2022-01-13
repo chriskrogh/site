@@ -10,6 +10,7 @@ import {
   SiCypress,
   SiDocker,
   SiDotnet,
+  SiExpress,
   SiFigma,
   SiGithubactions,
   SiGraphql,
@@ -83,6 +84,10 @@ export const TechIconLinks: Record<TECH, IconLink> = {
   [TECH.ETHERS]: {
     icon: FaCloud,
     link: 'https://docs.ethers.io/',
+  },
+  [TECH.EXPRESS]: {
+    icon: SiExpress,
+    link: 'http://expressjs.com/',
   },
   [TECH.FIGMA]: {
     icon: SiFigma,

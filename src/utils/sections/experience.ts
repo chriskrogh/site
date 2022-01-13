@@ -46,6 +46,7 @@ export const ExperienceSections: Record<EXPERIENCE, ExperienceSection> = {
       TECH.TYPESCRIPT,
       TECH.REACT,
       TECH.NODE,
+      TECH.EXPRESS,
       TECH.JEST,
       TECH.CYPRESS,
       TECH.TRAVIS_CI,

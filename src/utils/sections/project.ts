@@ -12,6 +12,8 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
       'Crafted a modern exchange experience that mints and burns tokens with React, Ethers and NextJS.',
     ],
     link: 'https://caribto.com',
+    gitHubLink: 'https://github.com/chriskrogh/caribto',
+    figmaLink: 'https://www.figma.com/file/Ny1CEdeYSnOeFw9EBDsnbX/Caribto',
     tech: [
       TECH.TYPESCRIPT,
       TECH.SOLIDITY,
@@ -33,7 +35,7 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
     gitHubLink: 'https://github.com/cs446-software-design-architecture/app',
     figmaLink:
       'https://www.figma.com/file/FgGQL83PXAF6aDlG6DGxwi/V1?node-id=10%3A114',
-    tech: [TECH.JAVA, TECH.ANDROID, TECH.NODE, TECH.MONGO],
+    tech: [TECH.JAVA, TECH.ANDROID, TECH.NODE, TECH.EXPRESS, TECH.MONGO],
   },
   [PROJECT.SONG_STATS]: {
     image: '/assets/song_stats_logo.png',
@@ -43,7 +45,14 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
       'Implemented queries using TypeORM and MySql that fetch missing fragments of data from Spotify when necessary.',
     ],
     gitHubLink: 'https://github.com/Dimatsa/cs348-database',
-    tech: [TECH.TYPESCRIPT, TECH.REACT, TECH.NODE, TECH.MYSQL, TECH.DOCKER],
+    tech: [
+      TECH.TYPESCRIPT,
+      TECH.REACT,
+      TECH.NODE,
+      TECH.EXPRESS,
+      TECH.MYSQL,
+      TECH.DOCKER,
+    ],
   },
   [PROJECT.FINDER]: {
     image: '/assets/finder_logo.svg',
@@ -83,7 +92,14 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
     ],
     link: 'https://uwacs.club/',
     gitHubLink: 'https://github.com/uwaterlooacs/acs',
-    tech: [TECH.TYPESCRIPT, TECH.REACT, TECH.NODE, TECH.MONGO, TECH.AWS],
+    tech: [
+      TECH.TYPESCRIPT,
+      TECH.REACT,
+      TECH.NODE,
+      TECH.EXPRESS,
+      TECH.MONGO,
+      TECH.AWS,
+    ],
   },
   [PROJECT.KIT]: {
     image: '/assets/kit.png',

@@ -13,6 +13,7 @@ export enum TECH {
   DOCKER = 'Docker',
   DOTNET = '.NET',
   ETHERS = 'Ethers',
+  EXPRESS = 'Express',
   FIGMA = 'Figma',
   GITHUB_ACTIONS = 'GitHub\u00a0Actions',
   GRAPHQL = 'GraphQL',
