@@ -63,6 +63,8 @@ type Props = {
   selectedFrameworksState: [Framework[], (frameworks: Framework[]) => void];
   selectedDevOpsState: [DevOps[], (devOps: DevOps[]) => void];
   selectedDatabasesState: [Database[], (databases: Database[]) => void];
+  hasExperiences: boolean;
+  hasProjects: boolean;
 };
 
 const Menu: React.FC<Props> = ({
@@ -71,6 +73,8 @@ const Menu: React.FC<Props> = ({
   selectedFrameworksState,
   selectedDevOpsState,
   selectedDatabasesState,
+  hasExperiences,
+  hasProjects,
 }) => {
   const screenSize = useScreenSize();
 
@@ -118,9 +122,11 @@ const Menu: React.FC<Props> = ({
     <Container>
       <Typography as="h4">Sections</Typography>
       <Spacer height={8} />
-      <Button href={`#${EXPERIENCE_HEADER_ID}`}>Experience</Button>
-      <Spacer height={4} />
-      <Button href={`#${PROJECTS_HEADER_ID}`}>Projects</Button>
+      {hasExperiences && (
+        <Button href={`#${EXPERIENCE_HEADER_ID}`}>Experience</Button>
+      )}
+      {hasExperiences && hasProjects && <Spacer height={4} />}
+      {hasProjects && <Button href={`#${PROJECTS_HEADER_ID}`}>Projects</Button>}
       <Spacer height={16} />
       <Row>
         <Typography as="h4">Filter</Typography>

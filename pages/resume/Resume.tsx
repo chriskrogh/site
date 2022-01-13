@@ -120,6 +120,8 @@ const Resume: React.FC = () => {
           selectedFrameworksState={selectedFrameworksState}
           selectedDevOpsState={selectedDevOpsState}
           selectedDatabasesState={selectedDatabasesState}
+          hasExperiences={experiences.length > 0}
+          hasProjects={projects.length > 0}
         />
       )}
       <MainPage>
@@ -179,6 +181,8 @@ const Resume: React.FC = () => {
           selectedFrameworksState={selectedFrameworksState}
           selectedDevOpsState={selectedDevOpsState}
           selectedDatabasesState={selectedDatabasesState}
+          hasExperiences={experiences.length > 0}
+          hasProjects={projects.length > 0}
         />
       </Modal>
     </>
