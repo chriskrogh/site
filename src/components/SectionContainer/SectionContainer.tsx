@@ -5,8 +5,7 @@ export const RAIL_SPACING = 16;
 
 const SectionContainer = styled.div<{ reverse?: boolean }>`
   display: flex;
-  width: calc(100% - ${2 * RAIL_SPACING});
-  padding: 0 ${RAIL_SPACING}px;
+  width: 100%;
 
   flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
   justify-content: center;

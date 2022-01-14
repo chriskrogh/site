@@ -5,6 +5,7 @@ import Spacer from 'components/Spacer';
 import Typography from 'components/Typography';
 import React from 'react';
 import { FaTimesCircle } from 'react-icons/fa';
+import { MENU_WIDTH } from 'sections/styles';
 import styled from 'styled-components';
 import {
   CATEGORY,
@@ -22,7 +23,6 @@ export const EXPERIENCE_HEADER_ID = 'experience';
 export const PROJECTS_HEADER_ID = 'projects';
 
 const TOP_BOTTOM_PADDING = 32;
-const MENU_WIDTH = 184;
 
 const { languages, frameworks, devOps, databases } = getSortedFilters();
 
@@ -33,7 +33,8 @@ const Container = styled(Column)`
     left: 0;
     overflow-y: auto;
     height: calc(100% - ${2 * TOP_BOTTOM_PADDING}px);
-    max-width: ${MENU_WIDTH}px;
+    width: ${MENU_WIDTH}px;
+    min-width: ${MENU_WIDTH}px;
     padding: ${TOP_BOTTOM_PADDING}px 0 ${TOP_BOTTOM_PADDING}px 32px;
     background-color: rgba(255, 255, 255, 0.1);
   }
