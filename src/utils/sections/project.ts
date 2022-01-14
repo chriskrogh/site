@@ -24,19 +24,6 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
       TECH.CHAI,
     ],
   },
-  [PROJECT.LIFE_LOGS]: {
-    image: '/assets/life_logs_logo.png',
-    title: 'Life Logs',
-    descriptions: [
-      'Developed an Android app that uses NLP to generate meaningful summaries about your life after you tell it about your day.',
-      'Created a NodeJS server to handle authentication and data backups.',
-      'Designed a simple but impactful user experience on Figma.',
-    ],
-    gitHubLink: 'https://github.com/cs446-software-design-architecture/app',
-    figmaLink:
-      'https://www.figma.com/file/FgGQL83PXAF6aDlG6DGxwi/V1?node-id=10%3A114',
-    tech: [TECH.JAVA, TECH.ANDROID, TECH.NODE, TECH.EXPRESS, TECH.MONGO],
-  },
   [PROJECT.SONG_STATS]: {
     image: '/assets/song_stats_logo.png',
     title: 'Song Stats',
@@ -53,6 +40,19 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
       TECH.MYSQL,
       TECH.DOCKER,
     ],
+  },
+  [PROJECT.LIFE_LOGS]: {
+    image: '/assets/life_logs_logo.png',
+    title: 'Life Logs',
+    descriptions: [
+      'Developed an Android app that uses NLP to generate meaningful summaries about your life after you tell it about your day.',
+      'Created a NodeJS server to handle authentication and data backups.',
+      'Designed a simple but impactful user experience on Figma.',
+    ],
+    gitHubLink: 'https://github.com/cs446-software-design-architecture/app',
+    figmaLink:
+      'https://www.figma.com/file/FgGQL83PXAF6aDlG6DGxwi/V1?node-id=10%3A114',
+    tech: [TECH.JAVA, TECH.ANDROID, TECH.NODE, TECH.EXPRESS, TECH.MONGO],
   },
   [PROJECT.FINDER]: {
     image: '/assets/finder_logo.svg',
