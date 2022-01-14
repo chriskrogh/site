@@ -28,7 +28,7 @@ const { languages, frameworks, devOps, databases } = getSortedFilters();
 
 const Container = styled(Column)`
   @media (min-width: ${TABLET_THRESHOLD}px) {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     overflow-y: auto;
