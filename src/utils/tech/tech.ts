@@ -1,4 +1,4 @@
-import { FaCloud, FaHardHat, FaLink } from 'react-icons/fa';
+import { FaCloud, FaHardHat, FaLink, FaPlug } from 'react-icons/fa';
 import {
   SiAmazonaws,
   SiAndroid,
@@ -176,6 +176,10 @@ export const TechIconLinks: Record<TECH, IconLink> = {
   [TECH.TRAVIS_CI]: {
     icon: SiTravisci,
     link: 'https://www.travis-ci.com/',
+  },
+  [TECH.TYPECHAIN]: {
+    icon: FaPlug,
+    link: 'https://github.com/dethcrypto/TypeChain',
   },
   [TECH.TYPESCRIPT]: {
     icon: SiTypescript,

@@ -36,6 +36,7 @@ export enum TECH {
   SOLIDITY = 'Solidity',
   SWIFT = 'Swift',
   TRAVIS_CI = 'Travis\u00a0CI',
+  TYPECHAIN = 'TypeChain',
   TYPESCRIPT = 'TypeScript',
 }
 

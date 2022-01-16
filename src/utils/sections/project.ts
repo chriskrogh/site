@@ -19,6 +19,7 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
       TECH.NEXTJS,
       TECH.ETHERS,
       TECH.HARDHAT,
+      TECH.TYPECHAIN,
       TECH.CHAI,
       TECH.TYPESCRIPT,
       TECH.SOLIDITY,
