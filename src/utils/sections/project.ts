@@ -15,13 +15,13 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
     gitHubLink: 'https://github.com/chriskrogh/caribto',
     figmaLink: 'https://www.figma.com/file/Ny1CEdeYSnOeFw9EBDsnbX/Caribto',
     tech: [
-      TECH.TYPESCRIPT,
-      TECH.SOLIDITY,
       TECH.REACT,
       TECH.NEXTJS,
       TECH.ETHERS,
       TECH.HARDHAT,
       TECH.CHAI,
+      TECH.TYPESCRIPT,
+      TECH.SOLIDITY,
     ],
   },
   [PROJECT.SONG_STATS]: {
@@ -33,12 +33,12 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
     ],
     gitHubLink: 'https://github.com/Dimatsa/cs348-database',
     tech: [
-      TECH.TYPESCRIPT,
       TECH.REACT,
       TECH.NODE,
       TECH.EXPRESS,
       TECH.MYSQL,
       TECH.DOCKER,
+      TECH.TYPESCRIPT,
     ],
   },
   [PROJECT.LIFE_LOGS]: {
@@ -52,7 +52,14 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
     gitHubLink: 'https://github.com/cs446-software-design-architecture/app',
     figmaLink:
       'https://www.figma.com/file/FgGQL83PXAF6aDlG6DGxwi/V1?node-id=10%3A114',
-    tech: [TECH.JAVA, TECH.ANDROID, TECH.NODE, TECH.EXPRESS, TECH.MONGO],
+    tech: [
+      TECH.ANDROID,
+      TECH.NODE,
+      TECH.EXPRESS,
+      TECH.MONGO,
+      TECH.JAVA,
+      TECH.TYPESCRIPT,
+    ],
   },
   [PROJECT.FINDER]: {
     image: '/assets/finder_logo.svg',
@@ -73,14 +80,14 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
     ],
     gitHubLink: 'https://github.com/chriskrogh/another-note-app',
     tech: [
-      TECH.TYPESCRIPT,
-      TECH.JAVASCRIPT,
       TECH.REACT,
       TECH.RELAY,
       TECH.GRAPHQL,
       TECH.NODE,
       TECH.MONGO,
       TECH.AWS,
+      TECH.TYPESCRIPT,
+      TECH.JAVASCRIPT,
     ],
   },
   [PROJECT.ACS]: {
@@ -93,12 +100,12 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
     link: 'https://uwacs.club/',
     gitHubLink: 'https://github.com/uwaterlooacs/acs',
     tech: [
-      TECH.TYPESCRIPT,
       TECH.REACT,
       TECH.NODE,
       TECH.EXPRESS,
       TECH.MONGO,
       TECH.AWS,
+      TECH.TYPESCRIPT,
     ],
   },
   [PROJECT.KIT]: {
@@ -118,7 +125,7 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
       'Engineered a service using Azure functions that cached exchange rates, to reduce the number of calls to an external API.',
     ],
     gitHubLink: 'https://github.com/chriskrogh/Vings',
-    tech: [TECH.SWIFT, TECH.REACT_NATIVE, TECH.AZURE_FUNCTIONS],
+    tech: [TECH.REACT_NATIVE, TECH.AZURE_FUNCTIONS, TECH.SWIFT],
   },
   [PROJECT.SOCKET_CHAT]: {
     image: '/assets/socket_chat.png',
@@ -127,6 +134,6 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
       'Created a chat web app using NodeJS, Express, and Socket.io to learn more about web sockets.',
     ],
     gitHubLink: 'https://github.com/chriskrogh/socket-chat',
-    tech: [TECH.JAVASCRIPT, TECH.HTML, TECH.CSS],
+    tech: [TECH.HTML, TECH.CSS, TECH.JAVASCRIPT],
   },
 };

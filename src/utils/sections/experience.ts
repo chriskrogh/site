@@ -14,7 +14,6 @@ export const ExperienceSections: Record<EXPERIENCE, ExperienceSection> = {
     ],
     link: 'https://dot.cash',
     tech: [
-      TECH.TYPESCRIPT,
       TECH.REACT,
       TECH.REACT_NATIVE,
       TECH.NEXTJS,
@@ -26,6 +25,7 @@ export const ExperienceSections: Record<EXPERIENCE, ExperienceSection> = {
       TECH.KUBERNETES,
       TECH.GITHUB_ACTIONS,
       TECH.AZURE,
+      TECH.TYPESCRIPT,
     ],
     position: 'Founder, CTO',
     duration: {
@@ -43,13 +43,13 @@ export const ExperienceSections: Record<EXPERIENCE, ExperienceSection> = {
     ],
     link: 'https://faire.com',
     tech: [
-      TECH.TYPESCRIPT,
       TECH.REACT,
       TECH.NODE,
       TECH.EXPRESS,
       TECH.JEST,
       TECH.CYPRESS,
       TECH.TRAVIS_CI,
+      TECH.TYPESCRIPT,
     ],
     position: 'Frontend Engineer Co-op',
     duration: {
@@ -66,13 +66,13 @@ export const ExperienceSections: Record<EXPERIENCE, ExperienceSection> = {
     ],
     link: 'https://sellyourstuff.tt/',
     tech: [
-      TECH.TYPESCRIPT,
       TECH.REACT,
       TECH.NEXTJS,
       TECH.APOLLO,
       TECH.GRAPHQL,
       TECH.MONGO,
       TECH.NODE,
+      TECH.TYPESCRIPT,
     ],
     position: 'Software Engineer',
     duration: {
@@ -88,7 +88,7 @@ export const ExperienceSections: Record<EXPERIENCE, ExperienceSection> = {
       'Reduced dev server build time from ~30s to ~10s by implementing hot module reloading with custom webpack config.',
     ],
     link: 'https://webveloper.com/',
-    tech: [TECH.TYPESCRIPT, TECH.REACT, TECH.NODE],
+    tech: [TECH.REACT, TECH.NODE, TECH.TYPESCRIPT],
     position: 'Software Engineer Co-Op',
     duration: {
       start: new Date(2020, 3, 15),
@@ -104,7 +104,7 @@ export const ExperienceSections: Record<EXPERIENCE, ExperienceSection> = {
       'Automated large manual tasks like regression test script conversion using Replay and VM deployment using PowerShell.',
     ],
     link: 'https://www.intuit.com/',
-    tech: [TECH.JAVA, TECH.TYPESCRIPT, TECH.NODE],
+    tech: [TECH.NODE, TECH.TYPESCRIPT, TECH.JAVA],
     position: 'Software Engineer Co-Op',
     duration: {
       start: new Date(2019, 8, 1),
@@ -119,7 +119,7 @@ export const ExperienceSections: Record<EXPERIENCE, ExperienceSection> = {
       'Developed adaptive React components featuring state persistence with Redux, to hook into back-end calculation services.',
     ],
     link: 'https://www.manulife.com/',
-    tech: [TECH.JAVASCRIPT, TECH.REACT, TECH.CSHARP, TECH.DOTNET],
+    tech: [TECH.REACT, TECH.DOTNET, TECH.CSHARP, TECH.JAVASCRIPT],
     position: 'Full Stack Engineer Co-Op',
     duration: {
       start: new Date(2019, 0, 3),
@@ -134,7 +134,7 @@ export const ExperienceSections: Record<EXPERIENCE, ExperienceSection> = {
       'Automated VM creation from snapshots to recover from possible downtime.',
     ],
     link: 'https://www.teleios-systems.com/',
-    tech: [TECH.CSHARP, TECH.DOTNET, TECH.AZURE],
+    tech: [TECH.DOTNET, TECH.AZURE, TECH.CSHARP],
     position: 'Software Developer Intern',
     duration: {
       start: new Date(2018, 4, 5),
