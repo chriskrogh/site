@@ -34,6 +34,7 @@ export enum EXPERIENCE {
 
 export enum PROJECT {
   CARIBTO = 'CARIBTO',
+  COLORZ = 'COLORZ',
   SONG_STATS = 'SONG_STATS',
   LIFE_LOGS = 'LIFE_LOGS',
   FINDER = 'FINDER',
