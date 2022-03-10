@@ -23,6 +23,7 @@ export type ProjectSection = BaseContentSection & {
 };
 
 export enum EXPERIENCE {
+  ZED_LABS = 'ZED_LABS',
   DOT = 'DOT',
   FAIRE = 'FAIRE',
   SYS = 'SYS',
@@ -36,6 +37,7 @@ export enum PROJECT {
   CARIBTO = 'CARIBTO',
   COLORZ = 'COLORZ',
   SONG_STATS = 'SONG_STATS',
+  MORE_NOTES = 'MORE_NOTES',
   LIFE_LOGS = 'LIFE_LOGS',
   FINDER = 'FINDER',
   ANOTHER_NOTE_APP = 'ANOTHER_NOTE_APP',

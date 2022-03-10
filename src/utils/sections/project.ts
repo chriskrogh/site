@@ -63,6 +63,22 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
       TECH.TYPESCRIPT,
     ],
   },
+  [PROJECT.MORE_NOTES]: {
+    image: '/assets/another_note_app_logo.png',
+    title: 'Knote',
+    descriptions: [
+      'Built a note app for software engineers using Kotlin that stores notes in a PostgreSQL database.',
+      'Supports markdown, syntax highlighting, search and sharing.',
+    ],
+    tech: [
+      TECH.KTOR,
+      TECH.POSTGRES,
+      TECH.KOTLIN,
+      TECH.HTML,
+      TECH.CSS,
+      TECH.JAVASCRIPT,
+    ],
+  },
   [PROJECT.LIFE_LOGS]: {
     image: '/assets/life_logs_logo.png',
     title: 'Life Logs',
