@@ -25,6 +25,27 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
       TECH.SOLIDITY,
     ],
   },
+  [PROJECT.COLORZ]: {
+    image: '/assets/colorz_logo.png',
+    title: 'Colorz',
+    descriptions: [
+      'Built a Dapp that allows users to mint their favourite colors on the blockchain as NFTs.',
+      'Tested and deployed an ERC721 token preset from OpenZeppelin to the Polygon Mumbai test network using Hardhat.',
+      'Designed a simple experience that mints colors with React, Ethers and NextJS.',
+    ],
+    link: 'https://colorz-chi.vercel.app/',
+    gitHubLink: 'https://github.com/chriskrogh/colorz',
+    tech: [
+      TECH.REACT,
+      TECH.NEXTJS,
+      TECH.ETHERS,
+      TECH.HARDHAT,
+      TECH.TYPECHAIN,
+      TECH.CHAI,
+      TECH.TYPESCRIPT,
+      TECH.SOLIDITY,
+    ],
+  },
   [PROJECT.SONG_STATS]: {
     image: '/assets/song_stats_logo.png',
     title: 'Song Stats',
@@ -40,6 +61,22 @@ export const ProjectSections: Record<PROJECT, ProjectSection> = {
       TECH.MYSQL,
       TECH.DOCKER,
       TECH.TYPESCRIPT,
+    ],
+  },
+  [PROJECT.MORE_NOTES]: {
+    image: '/assets/another_note_app_logo.png',
+    title: 'Knote',
+    descriptions: [
+      'Built a note app for software engineers using Kotlin that stores notes in a PostgreSQL database.',
+      'Supports markdown, syntax highlighting, search and sharing.',
+    ],
+    tech: [
+      TECH.KTOR,
+      TECH.POSTGRES,
+      TECH.KOTLIN,
+      TECH.HTML,
+      TECH.CSS,
+      TECH.JAVASCRIPT,
     ],
   },
   [PROJECT.LIFE_LOGS]: {

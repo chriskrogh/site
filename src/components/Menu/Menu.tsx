@@ -35,6 +35,7 @@ const Container = styled(Column)`
     height: calc(100% - ${2 * TOP_BOTTOM_PADDING}px);
     width: ${MENU_WIDTH}px;
     min-width: ${MENU_WIDTH}px;
+    height: calc(100vh - ${2 * TOP_BOTTOM_PADDING}px);
     padding: ${TOP_BOTTOM_PADDING}px 0 ${TOP_BOTTOM_PADDING}px 32px;
     background-color: rgba(255, 255, 255, 0.1);
   }

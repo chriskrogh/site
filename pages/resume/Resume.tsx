@@ -36,6 +36,13 @@ const HeaderWrapper = styled(Row)`
   }
 `;
 
+const ContentContainer = styled(Column)`
+  @media (max-width: ${MOBILE_THRESHOLD}px) {
+    padding: 0 16px;
+    width: calc(100% - 32px);
+  }
+`;
+
 const Resume: React.FC = () => {
   const screenSize = useScreenSize();
 
@@ -118,7 +125,7 @@ const Resume: React.FC = () => {
             hasProjects={projects.length > 0}
           />
         )}
-        <Column alignItems="center" fullWidth>
+        <ContentContainer alignItems="center" fullWidth>
           <Spacer height={screenSize === 'desktop' ? 48 : 24} />
           {screenSize !== 'desktop' && (
             <Row justifyContent="flex-end" fullWidth>
@@ -167,7 +174,7 @@ const Resume: React.FC = () => {
           )}
           <Spacer height={32} />
           <Footer />
-        </Column>
+        </ContentContainer>
       </Row>
       <Modal isOpen={isModalOpen} close={closeModal}>
         <Menu

@@ -1,4 +1,4 @@
-import { FaCloud, FaHardHat, FaLink, FaPlug } from 'react-icons/fa';
+import { FaBookmark, FaCloud, FaHardHat, FaLink, FaPlug } from 'react-icons/fa';
 import {
   SiAmazonaws,
   SiAndroid,
@@ -13,18 +13,21 @@ import {
   SiExpress,
   SiFigma,
   SiGithubactions,
+  SiGooglecloud,
   SiGraphql,
   SiHtml5,
   SiIonic,
   SiJava,
   SiJavascript,
   SiJest,
+  SiKotlin,
   SiKubernetes,
   SiMicrosoftazure,
   SiMongodb,
   SiMysql,
   SiNextdotjs,
   SiNodedotjs,
+  SiPostgresql,
   SiPython,
   SiReact,
   SiRedis,
@@ -93,6 +96,10 @@ export const TechIconLinks: Record<TECH, IconLink> = {
     icon: SiFigma,
     link: 'https://www.figma.com/',
   },
+  [TECH.GCP]: {
+    icon: SiGooglecloud,
+    link: 'https://cloud.google.com/',
+  },
   [TECH.GITHUB_ACTIONS]: {
     icon: SiGithubactions,
     link: 'https://github.com/features/actions',
@@ -125,6 +132,14 @@ export const TechIconLinks: Record<TECH, IconLink> = {
     icon: SiJest,
     link: 'https://jestjs.io/',
   },
+  [TECH.KOTLIN]: {
+    icon: SiKotlin,
+    link: 'https://kotlinlang.org/',
+  },
+  [TECH.KTOR]: {
+    icon: FaBookmark,
+    link: 'https://ktor.io/',
+  },
   [TECH.KUBERNETES]: {
     icon: SiKubernetes,
     link: 'https://kubernetes.io/',
@@ -144,6 +159,10 @@ export const TechIconLinks: Record<TECH, IconLink> = {
   [TECH.NODE]: {
     icon: SiNodedotjs,
     link: 'https://nodejs.org/',
+  },
+  [TECH.POSTGRES]: {
+    icon: SiPostgresql,
+    link: 'https://www.postgresql.org/',
   },
   [TECH.PYTHON]: {
     icon: SiPython,

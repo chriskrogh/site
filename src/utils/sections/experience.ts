@@ -3,11 +3,36 @@ import { TECH } from 'utils/tech';
 import { EXPERIENCE, ExperienceSection } from './types';
 
 export const ExperienceSections: Record<EXPERIENCE, ExperienceSection> = {
+  [EXPERIENCE.ZED_LABS]: {
+    image: '/assets/zed_logo.jpeg',
+    title: 'Zed Labs',
+    descriptions: [
+      'Migrated from Firebase to an Apollo server to support typed GraphQL requests for authentication and wallet transactions.',
+      'Configured CICD using GitHub Actions and Docker to build and deploy our server to a staging environment.',
+      'Implemented point of sale transaction and employee management features for merchants to manage e-money payments.',
+    ],
+    link: 'https://zed.io',
+    tech: [
+      TECH.REACT_NATIVE,
+      TECH.NODE,
+      TECH.APOLLO,
+      TECH.GRAPHQL,
+      TECH.POSTGRES,
+      TECH.DOCKER,
+      TECH.GITHUB_ACTIONS,
+      TECH.GCP,
+      TECH.TYPESCRIPT,
+    ],
+    position: 'Software Engineer',
+    duration: {
+      start: new Date(2022, 1, 17),
+    },
+  },
   [EXPERIENCE.DOT]: {
     image: '/assets/dot_logo.png',
     title: 'Dot',
     descriptions: [
-      'Architected, designed, and implemented an ewallet platform for Trinidad and Tobago!',
+      'Architected, designed, and implemented an ewallet platform for Trinidad and Tobago.',
       'Crafted a modern, mobile wallet user experience in Figma and implemented it in React Native.',
       'Engineered a GraphQL microservice backend using Apollo Federation that handles authentication and processes peer-to-peer and VISA transactions.',
       'Configured container orchestration using Kubernetes to integrate with GitHub actions to manage the CICD pipeline.',
@@ -27,7 +52,7 @@ export const ExperienceSections: Record<EXPERIENCE, ExperienceSection> = {
       TECH.AZURE,
       TECH.TYPESCRIPT,
     ],
-    position: 'Founder, CTO',
+    position: 'Founder, Software Engineer',
     duration: {
       start: new Date(2020, 10, 1),
       end: new Date(2021, 9, 1),
