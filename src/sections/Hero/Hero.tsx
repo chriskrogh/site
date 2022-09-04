@@ -32,9 +32,7 @@ const Hero: React.FC = () => {
         </Typography>
         <Spacer height={16} />
         <Typography as="p" center>
-          My name is Chris and I{"'"}m a final year student at the{' '}
-          <a href="https://uwaterloo.ca/">University of Waterloo</a> pursuing a
-          Bachelor of Computer Science - Minor in Statistics.
+          My name is Chris and I like to build cool things.
         </Typography>
       </Summary>
     </Container>

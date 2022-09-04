@@ -15,7 +15,7 @@ import {
   getSortedFilters,
   Language,
 } from 'utils/sections';
-import { TABLET_THRESHOLD, useScreenSize } from 'utils/useScreenSize';
+import { TABLET_THRESHOLD } from 'utils/useScreenSize';
 
 import Filter, { FILTER_HEIGHT } from './Filter';
 
@@ -78,8 +78,6 @@ const Menu: React.FC<Props> = ({
   hasExperiences,
   hasProjects,
 }) => {
-  const screenSize = useScreenSize();
-
   const [selectedCategories, setSelectedCategories] = selectedCategoriesState;
   const [selectedLanguages, setSelectedLanguages] = selectedLanguagesState;
   const [selectedFrameworks, setSelectedFrameworks] = selectedFrameworksState;
@@ -122,6 +120,8 @@ const Menu: React.FC<Props> = ({
 
   return (
     <Container>
+      <Button href="/resume.pdf">View PDF</Button>
+      <Spacer height={8} />
       <Typography as="h4">Sections</Typography>
       <Spacer height={8} />
       {hasExperiences && (
@@ -138,14 +138,6 @@ const Menu: React.FC<Props> = ({
         </Button>
       </Row>
       <Spacer height={8} />
-      {screenSize === 'desktop' && (
-        <>
-          <Typography as="p">
-            <i>Hold shift to scroll horizontally.</i>
-          </Typography>
-          <Spacer height={8} />
-        </>
-      )}
       <Typography as="h5" secondary>
         Categories
       </Typography>
@@ -237,10 +229,6 @@ const Menu: React.FC<Props> = ({
           </Row>
         ))}
       </FilterContainer>
-      <Spacer height={16} />
-      <Typography as="h4">More</Typography>
-      <Spacer height={8} />
-      <Button href="/resume.pdf">View PDF</Button>
     </Container>
   );
 };

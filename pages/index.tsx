@@ -30,7 +30,7 @@ const Landing: React.FC = () => {
         <Spacer height={16} />
         <Contact />
         <Spacer height={16} />
-        <Button href="/resume">View Resume</Button>
+        <Button href="/resume">What I{"'"}ve worked on</Button>
         <Spacer height={16} />
         <Footer />
       </MainPage>

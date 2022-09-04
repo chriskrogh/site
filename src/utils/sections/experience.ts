@@ -3,6 +3,27 @@ import { TECH } from 'utils/tech';
 import { EXPERIENCE, ExperienceSection } from './types';
 
 export const ExperienceSections: Record<EXPERIENCE, ExperienceSection> = {
+  [EXPERIENCE.FAIRE]: {
+    image: '/assets/faire_logo.png',
+    title: 'Faire',
+    descriptions: [
+      'Built several features to improve the brand referral experience at Faire',
+      'Leading our migration to React Hooks',
+    ],
+    link: 'https://faire.com',
+    tech: [
+      TECH.REACT,
+      TECH.NODE,
+      TECH.EXPRESS,
+      TECH.JEST,
+      TECH.CYPRESS,
+      TECH.TYPESCRIPT,
+    ],
+    position: 'Software Engineer',
+    duration: {
+      start: new Date(2022, 3, 26),
+    },
+  },
   [EXPERIENCE.ZED_LABS]: {
     image: '/assets/zed_logo.jpeg',
     title: 'Zed Labs',
@@ -13,6 +34,7 @@ export const ExperienceSections: Record<EXPERIENCE, ExperienceSection> = {
     ],
     link: 'https://zed.io',
     tech: [
+      TECH.REACT,
       TECH.REACT_NATIVE,
       TECH.NODE,
       TECH.APOLLO,
@@ -58,7 +80,7 @@ export const ExperienceSections: Record<EXPERIENCE, ExperienceSection> = {
       end: new Date(2021, 9, 1),
     },
   },
-  [EXPERIENCE.FAIRE]: {
+  [EXPERIENCE.FAIRE_CO_OP]: {
     image: '/assets/faire_logo.png',
     title: 'Faire',
     descriptions: [

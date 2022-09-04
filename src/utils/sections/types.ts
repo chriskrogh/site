@@ -25,6 +25,7 @@ export type ProjectSection = BaseContentSection & {
 export enum EXPERIENCE {
   ZED_LABS = 'ZED_LABS',
   DOT = 'DOT',
+  FAIRE_CO_OP = 'FAIRE_CO_OP',
   FAIRE = 'FAIRE',
   SYS = 'SYS',
   WEBVELOPER = 'WEBVELOPER',

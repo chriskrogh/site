@@ -9,6 +9,7 @@ import Modal from 'components/Modal';
 import Row from 'components/Row';
 import Spacer from 'components/Spacer';
 import Typography from 'components/Typography';
+import isBefore from 'date-fns/isBefore';
 import Head from 'next/head';
 import React, { useState } from 'react';
 import { FaGripLines } from 'react-icons/fa';
@@ -89,13 +90,22 @@ const Resume: React.FC = () => {
     ...selectedDatabasesState[0],
   ];
 
-  const experiences = experiencesInCategories.filter((experience) =>
-    filters.reduce(
-      (result: boolean, filter) =>
-        result && ExperienceSections[experience].tech.includes(filter),
-      true,
-    ),
-  );
+  const experiences = experiencesInCategories
+    .filter((experience) =>
+      filters.reduce(
+        (result: boolean, filter) =>
+          result && ExperienceSections[experience].tech.includes(filter),
+        true,
+      ),
+    )
+    .sort((a, b) =>
+      isBefore(
+        ExperienceSections[a].duration.start,
+        ExperienceSections[b].duration.start,
+      )
+        ? 1
+        : -1,
+    );
   const projects = projectsInCategories.filter((project) =>
     filters.reduce(
       (result: boolean, filter) =>
